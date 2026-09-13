@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Pribylyov Yegor SE - 2514 JS Basics -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <h2>Navigation</h2>
+        <ul type="square">
+            <li><a href="1-index.html" target="_blank">HTML Basics</a></li>
+            <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
+            <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
+            <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
+            <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li> 
+            <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li> 
+        </ul>
+    </nav>
+    <header id="main-header">
+        <h1>JavaScript Basics</h1>
+    </header>
+    <main>
+        <section class="card about">
+            <h2>What is JavaScript</h2>
+            <p><span title="Programming language"><strong>JavaScript</strong></span> is a programming language that makes web pages
+               interactive: it responds to user actions, changes content
+               without reloading the page, and validates form data.</p>
+            <div>
+                <img src="images/js.jpg" alt="JavaScript example">
+            </div>
+
+            <h3>Variables</h3>
+            <p>In <strong>JavaScript</strong> there are three ways to declare a variable:</p>
+            <ul type="square">
+                <li><code>let</code> a variable whose value can be changed</li>
+                <li><code>const</code> a constant, its value cannot be changed</li>
+                <li><code>var</code> an outdated way, rarely used</li>
+            </ul>
+
+            <h3>Data Types</h3>
+            <ul>
+                <li>Number numbers (e.g. 10, 3.14)</li>
+                <li>String text strings (e.g. "Hello")</li>
+                <li>Boolean true or false</li>
+                <li>Array a collection of values</li>
+                <li>Object an object with keys and values</li>
+            </ul>
+
+            <h3>Conditions and Loops</h3>
+            <p>The <code>if / else</code> construction allows code to run only when
+               certain conditions are met. Loops such as <code>for</code> and <code>while</code>
+               are used to repeat actions multiple times.</p>
+
+            <h3>Functions</h3>
+            <p>A function is a block of code that can be called multiple times, so you
+               don't have to duplicate the same actions in different parts of the program.</p>
+        </section>
+        <section class="card">
+            <h2>Feedback Form</h2>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" placeholder="Name" id="name">
+                <br>
+                <label for="email">Your Email:</label>
+                <input type="email" name="email" placeholder="Your email" id="email">
+                <br>
+                <label for="topic">Choose a topic:</label>
+                <select id="topic" name="topic">
+                    <option value="js">Question about JavaScript</option>
+                    <option value="css">Question about CSS</option>
+                    <option value="html">Question about HTML</option>
+                </select>
+                <br>
+                <label for="comment">Leave a comment:</label>
+                <textarea name="message" placeholder="Your message" rows="5" id="comment"></textarea>
+                <br>
+                <button type="submit">Submit!</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Team Members</h2>
+        <ol type="I">
+            <li>Pribylyov Yegor</li>
+            <li>Nurdaulet Zhanybek</li>
+            <li>Yelnur Yessenali</li>
+        </ol>
+    </footer>
+</body>
+</html>

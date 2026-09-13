@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Pribylyov Yegor SE - 2514 JS DOM -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav-menu">  
+        <h2>Navigation</h2>
+        <ul type="square">
+            <li><a href="1-index.html" target="_blank">HTML Basics</a></li>
+            <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
+            <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
+            <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
+            <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li> 
+            <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li> 
+        </ul>
+    </nav>
+    <header id="main-header">
+        <h1>Working with the DOM</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>What is the DOM</h2>
+            <p><strong>DOM (Document Object Model)</strong> is a representation of an HTML page as a
+               tree of objects that JavaScript can work with. Each tag
+               becomes a node of the tree, accessible for reading and modification through code.</p>
+
+            <div>
+                <img src="images/dom.png" alt="DOM tree diagram">
+            </div>
+
+            <h3>Why the DOM is Needed</h3>
+            <p>Thanks to the DOM, JavaScript can change text, styles, add or
+               remove elements on a page without reloading it this is the foundation
+               of interactive websites.</p>
+
+            <h3>Main Methods</h3>
+            <ul>
+                <li><code>getElementById()</code> - finds an element by its id</li>
+                <li><code>querySelector()</code> - finds an element by a CSS selector</li>
+                <li><code>addEventListener()</code> - adds an event handler (click, input, etc.)</li>
+                <li><code>innerHTML</code> - changes the content of an element</li>
+            </ul>
+
+            <h3>DOM Methods Table</h3>
+            <div>
+                <table>
+                    <caption>DOM Methods Table</caption>
+                    <tr>
+                        <th>Method</th>
+                        <th>What it does</th>
+                        <th>Example use case</th>
+                    </tr>
+                    <tr>
+                        <td>getElementById</td>
+                        <td>Finds a single element by id</td>
+                        <td>Change a heading's text</td>
+                    </tr>
+                    <tr>
+                        <td>querySelectorAll</td>
+                        <td>Finds all elements matching a selector</td>
+                        <td>Style all cards</td>
+                    </tr>
+                    <tr>
+                        <td>addEventListener</td>
+                        <td>Listens for a user event</td>
+                        <td>React to a button click</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="card profile">
+            <br>
+            <h3>About the Team Members</h3>
+            <ul>
+                <li><strong>Pribylyov Yegor</strong> - Responsible for the JS Basics and JS DOM pages (JavaScript syntax basics, working with the DOM tree).</li>
+                <li><strong>Nurdaulet Zhanybek</strong> - Responsible for HTML: the HTML Advanced and Index pages (page structure, semantic tags).</li>
+                <li><strong>Yelnur Yessenali</strong> - Responsible for CSS: the CSS Basics and CSS Layout pages (styling, design, layout).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Team Members</h2>
+        <ol type="I">
+            <li>Pribylyov Yegor</li>
+            <li>Nurdaulet Zhanybek</li>
+            <li>Yelnur Yessenali</li>
+        </ol>
+    </footer>
+
+</body>
+</html>
