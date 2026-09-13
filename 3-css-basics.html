@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Yelnur Yessenali SE - 2514 CSS Basics -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css-pages.css">
+</head>
+<body>
+    <header id="main-header" class="css-hero">
+        <div class="hero-content">
+            <img class="profile-img css-logo" src="images/css-logo.svg" alt="CSS logo">
+            <div>
+                <p class="eyebrow">Web Design Lesson</p>
+                <h1>CSS Basics</h1>
+                <p class="hero-subtitle">How style rules turn a simple HTML page into a clear design</p>
+                <p class="page-author">Prepared by Yelnur Yessenali • SE-2514</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <h2>Navigation</h2>
+        <ul type="square">
+            <li><a href="1-index.html" target="_blank">HTML Basics</a></li>
+            <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
+            <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
+            <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
+            <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li>
+            <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li>
+        </ul>
+    </nav>
+
+    <main class="css-page-content">
+        <section class="lesson-panel intro-panel">
+            <div>
+                <p class="section-number">01 • PURPOSE</p>
+                <h2>What does CSS do?</h2>
+                <p><strong>CSS (Cascading Style Sheets)</strong> controls the visual part of a web page.
+                   HTML gives content its structure, while CSS chooses its colors, fonts, spacing,
+                   borders, sizes, and alignment.</p>
+                <p>These pages use the shared <code>css/style.css</code> file and a second stylesheet
+                   made only for the CSS lessons: <code>css/css-pages.css</code>.</p>
+            </div>
+
+            <div class="before-after">
+                <div class="mini-browser plain-example">
+                    <span class="browser-bar">HTML only</span>
+                    <h3>My page</h3>
+                    <p>Simple text and a link</p>
+                    <a href="#syntax">Learn more</a>
+                </div>
+                <div class="mini-browser styled-example">
+                    <span class="browser-bar">HTML + CSS</span>
+                    <h3>My page</h3>
+                    <p>Styled text and a button</p>
+                    <a href="#syntax">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-panel" id="syntax">
+            <p class="section-number">02 • SYNTAX</p>
+            <h2>How a CSS rule is written</h2>
+            <div class="syntax-demo">
+                <span class="syntax-selector">p</span>
+                <span>{</span>
+                <span class="syntax-property">color</span><span>:</span>
+                <span class="syntax-value">#2d6cdf</span><span>;</span>
+                <span class="syntax-property">font-size</span><span>:</span>
+                <span class="syntax-value">18px</span><span>;</span>
+                <span>}</span>
+            </div>
+            <div class="syntax-labels">
+                <p><strong>Selector:</strong> chooses the HTML element.</p>
+                <p><strong>Property:</strong> says what will change.</p>
+                <p><strong>Value:</strong> says how it will look.</p>
+            </div>
+        </section>
+
+        <section class="lesson-panel">
+            <p class="section-number">03 • SELECTORS</p>
+            <h2>Four selector types</h2>
+            <div class="selector-grid">
+                <article class="selector-card element-card">
+                    <span class="selector-symbol">p</span>
+                    <h3>Element</h3>
+                    <p>Styles every tag of the same type.</p>
+                    <code>p { color: #222; }</code>
+                </article>
+                <article class="selector-card class-card">
+                    <span class="selector-symbol">.card</span>
+                    <h3>Class</h3>
+                    <p>Can be reused on many elements.</p>
+                    <code>.card { padding: 20px; }</code>
+                </article>
+                <article class="selector-card id-card">
+                    <span class="selector-symbol">#header</span>
+                    <h3>ID</h3>
+                    <p>Targets one unique element.</p>
+                    <code>#header { color: white; }</code>
+                </article>
+                <article class="selector-card descendant-card">
+                    <span class="selector-symbol">nav a</span>
+                    <h3>Descendant</h3>
+                    <p>Targets an element inside another.</p>
+                    <code>nav a { padding: 10px; }</code>
+                </article>
+            </div>
+        </section>
+
+        <section class="lesson-panel box-model-section">
+            <div class="box-model-text">
+                <p class="section-number">04 • BOX MODEL</p>
+                <h2>Every element is a box</h2>
+                <p>The browser calculates the size of each element using four layers.
+                   Reading them from the inside out makes the box model easier to remember.</p>
+                <ol>
+                    <li><strong>Content</strong> - the text or image.</li>
+                    <li><strong>Padding</strong> - space inside the border.</li>
+                    <li><strong>Border</strong> - the line around the element.</li>
+                    <li><strong>Margin</strong> - space outside the border.</li>
+                </ol>
+            </div>
+            <div class="margin-box">
+                <span>Margin</span>
+                <div class="border-box">
+                    <span>Border</span>
+                    <div class="padding-box">
+                        <span>Padding</span>
+                        <div class="content-box">Content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-panel visual-tools">
+            <div>
+                <p class="section-number">05 • COLOR</p>
+                <h2>A small color palette</h2>
+                <div class="palette-row">
+                    <div class="color-swatch navy"><span>#1A2B4C</span></div>
+                    <div class="color-swatch blue"><span>#2D6CDF</span></div>
+                    <div class="color-swatch light"><span>#F4F6F8</span></div>
+                    <div class="color-swatch white"><span>#FFFFFF</span></div>
+                </div>
+            </div>
+            <div class="hover-demo">
+                <p class="section-number">06 • HOVER</p>
+                <h2>Pseudo-class example</h2>
+                <p>A <code>:hover</code> rule changes an element when the pointer is over it.</p>
+                <a class="demo-button" href="4-css-layout.html">Hover over me</a>
+            </div>
+        </section>
+
+        <section class="lesson-panel team-work">
+            <p class="section-number">TEAM CONTRIBUTION</p>
+            <h2>Who worked on what?</h2>
+            <div class="role-grid">
+                <div><strong>Nurdaulet Zhanybek</strong><span>HTML pages</span></div>
+                <div class="current-author"><strong>Yelnur Yessenali</strong><span>CSS pages</span></div>
+                <div><strong>Pribylyov Yegor</strong><span>JavaScript pages</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Team Members</h2>
+        <ol type="I">
+            <li>Pribylyov Yegor</li>
+            <li>Nurdaulet Zhanybek</li>
+            <li>Yelnur Yessenali</li>
+        </ol>
+        <p>CSS Basics page by Yelnur Yessenali</p>
+    </footer>
+</body>
+</html>
