@@ -1,3 +1,4 @@
+/* ===== 1. Element selectors — глобальные стили ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -49,6 +50,8 @@ hr {
     border-top: 2px solid #d0d5dc;
     margin: 20px 0;
 }
+
+/* ===== 2. ID selector — уникальный элемент ===== */
 #main-header {
     background-color: #1a2b4c;
     color: #fff;
@@ -71,6 +74,8 @@ hr {
     max-width: 450px;
     margin: 0 auto;
 }
+
+/* ===== 3. Class selectors — переиспользуемые блоки ===== */
 .card {
     background-color: #fff;
     max-width: 800px;
@@ -106,6 +111,8 @@ hr {
     color: #fff;
     margin: 0 0 8px 0;
 }
+
+/* ===== 4. Descendant selectors — вложенные элементы ===== */
 .nav-menu ul {
     display: flex;
     flex-wrap: wrap;
@@ -141,6 +148,8 @@ hr {
     max-width: 600px;
     margin: 8px auto;
 }
+
+/* ===== Форма и её элементы ===== */
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
@@ -171,6 +180,8 @@ hr {
 #contact-form button:hover {
     background-color: #1a4fa0;
 }
+
+/* ===== Футер ===== */
 footer {
     text-align: center;
     padding: 20px;
@@ -191,6 +202,7 @@ footer ol {
 footer h2 {
     color: #fff;
 }
+/* ===== Centering (replaces align="center" attributes) ===== */
 .nav-menu h2 {
     text-align: center;
 }
