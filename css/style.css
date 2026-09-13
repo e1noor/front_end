@@ -1,0 +1,240 @@
+/* ===== 1. Element selectors — глобальные стили ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+h1, h2, h3 {
+    color: #1a2b4c;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #2d6cdf;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1a4fa0;
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 16px auto;
+}
+
+th, td {
+    padding: 10px 16px;
+}
+
+th {
+    background-color: #1a2b4c;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #d0d5dc;
+    margin: 20px 0;
+}
+
+/* ===== 2. ID selector — уникальный элемент ===== */
+#main-header {
+    background-color: #1a2b4c;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#main-header h1 {
+    color: #fff;
+}
+
+#main-header hr {
+    border-top: 2px solid #ffffff55;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* ===== 3. Class selectors — переиспользуемые блоки ===== */
+.card {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    border-left: 4px solid #2d6cdf;
+}
+
+.profile {
+    text-align: center;
+    background-color: #eef3fb;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 12px 0;
+}
+
+.nav-menu {
+    background-color: #2d6cdf;
+    padding: 10px 0;
+}
+
+.nav-menu h2 {
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+/* ===== 4. Descendant selectors — вложенные элементы ===== */
+.nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li a {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #1a4fa0;
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
+
+.card table td,
+.card table th {
+    border: 1px solid #ccc;
+}
+
+.profile ul li {
+    text-align: left;
+    max-width: 600px;
+    margin: 8px auto;
+}
+
+/* ===== Форма и её элементы ===== */
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #2d6cdf;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#contact-form button:hover {
+    background-color: #1a4fa0;
+}
+
+/* ===== Футер ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a2b4c;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer hr {
+    border-top: 2px solid #ffffff55;
+}
+
+footer ol {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+}
+footer h2 {
+    color: #fff;
+}
+/* ===== Centering (replaces align="center" attributes) ===== */
+.nav-menu h2 {
+    text-align: center;
+}
+
+#main-header h1 {
+    text-align: center;
+}
+
+.card h2,
+.card h3 {
+    text-align: center;
+}
+
+.card img,
+.card div {
+    text-align: center;
+}
+
+.card table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card table td,
+.card table th {
+    text-align: center;
+}
+
+.profile h3 {
+    text-align: center;
+}
+
+footer h2 {
+    text-align: center;
+}
