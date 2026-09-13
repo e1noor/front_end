@@ -226,3 +226,440 @@ footer h2 {
 footer h2 {
     text-align: center;
 }
+
+#main-header.css-hero,
+#main-header.layout-hero {
+    padding: 32px 20px;
+    background: linear-gradient(135deg, #1a2b4c, #2d6cdf);
+}
+
+#main-header.layout-hero {
+    background: linear-gradient(135deg, #17324d, #168aad);
+}
+
+.css-lesson-page .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.css-lesson-page .css-logo {
+    width: 105px;
+    height: 105px;
+    margin: 0;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.css-lesson-page .eyebrow,
+.css-lesson-page .hero-subtitle,
+.css-lesson-page .page-author {
+    margin: 3px 0;
+    color: #fff;
+}
+
+.css-lesson-page .eyebrow {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.css-lesson-page .hero-subtitle {
+    font-size: 18px;
+}
+
+.css-lesson-page .page-author {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.css-lesson-page .css-page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 18px;
+}
+
+.css-lesson-page .lesson-panel {
+    margin-bottom: 22px;
+    padding: 26px;
+    background-color: #fff;
+    border: 1px solid #d9e0e8;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(26, 43, 76, 0.08);
+}
+
+.css-lesson-page .lesson-panel h2 {
+    margin-top: 2px;
+}
+
+.css-lesson-page .section-number {
+    margin-bottom: 2px;
+    color: #2d6cdf;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.css-lesson-page .intro-panel,
+.css-lesson-page .box-model-section,
+.css-lesson-page .visual-tools,
+.css-lesson-page .layout-intro,
+.css-lesson-page .layout-method {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.css-lesson-page .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.css-lesson-page .mini-browser {
+    min-height: 165px;
+    padding: 14px;
+    border: 2px solid #bcc6d2;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.css-lesson-page .mini-browser h3 {
+    margin: 18px 0 6px;
+    text-align: left;
+}
+
+.css-lesson-page .browser-bar {
+    display: block;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ccd3dc;
+    color: #5c6673;
+    font-size: 12px;
+}
+
+.css-lesson-page .plain-example {
+    background-color: #fff;
+    font-family: "Times New Roman", serif;
+}
+
+.css-lesson-page .plain-example a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.css-lesson-page .styled-example {
+    background-color: #eaf1ff;
+}
+
+.css-lesson-page .styled-example a,
+.css-lesson-page .demo-button {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #2d6cdf;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.css-lesson-page .styled-example a:hover,
+.css-lesson-page .demo-button:hover {
+    background-color: #163f82;
+    color: #fff;
+    text-decoration: none;
+}
+
+.css-lesson-page .syntax-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+    padding: 22px;
+    background-color: #172033;
+    color: #fff;
+    border-left: 6px solid #f6c344;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    font-size: 20px;
+}
+
+.css-lesson-page .syntax-selector { color: #ffcc66; }
+.css-lesson-page .syntax-property { color: #75d5ff; }
+.css-lesson-page .syntax-value { color: #9ee493; }
+
+.css-lesson-page .syntax-labels,
+.css-lesson-page .selector-grid,
+.css-lesson-page .role-grid,
+.css-lesson-page .unit-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.css-lesson-page .syntax-labels { grid-template-columns: repeat(3, 1fr); }
+.css-lesson-page .selector-grid,
+.css-lesson-page .unit-grid { grid-template-columns: repeat(4, 1fr); }
+.css-lesson-page .role-grid { grid-template-columns: repeat(3, 1fr); }
+
+.css-lesson-page .syntax-labels p {
+    padding: 12px;
+    background-color: #eef3fb;
+    border-radius: 6px;
+}
+
+.css-lesson-page .selector-card {
+    padding: 18px;
+    background-color: #f6f8fb;
+    border-top: 5px solid #2d6cdf;
+    border-radius: 7px;
+}
+
+.css-lesson-page .selector-card h3 {
+    margin: 10px 0 4px;
+    text-align: left;
+}
+
+.css-lesson-page .selector-symbol {
+    display: inline-block;
+    padding: 5px 9px;
+    background-color: #1a2b4c;
+    color: #fff;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}
+
+.css-lesson-page .class-card { border-color: #14a38b; }
+.css-lesson-page .id-card { border-color: #e58a25; }
+.css-lesson-page .descendant-card { border-color: #8c62c4; }
+
+.css-lesson-page .margin-box,
+.css-lesson-page .border-box,
+.css-lesson-page .padding-box,
+.css-lesson-page .content-box {
+    padding: 18px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.css-lesson-page .margin-box { background-color: #ffd98a; }
+.css-lesson-page .border-box { margin-top: 7px; background-color: #f0a65a; }
+.css-lesson-page .padding-box { margin-top: 7px; background-color: #9bd48f; }
+.css-lesson-page .content-box { margin-top: 7px; background-color: #80c7e8; }
+
+.css-lesson-page .palette-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.css-lesson-page .color-swatch {
+    display: flex;
+    align-items: end;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #cbd2db;
+    border-radius: 8px;
+}
+
+.css-lesson-page .color-swatch span {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.88);
+    color: #1a2b4c;
+    font-size: 12px;
+    text-align: center;
+}
+
+.css-lesson-page .swatch-navy { background-color: #1a2b4c; }
+.css-lesson-page .swatch-blue { background-color: #2d6cdf; }
+.css-lesson-page .swatch-light { background-color: #f4f6f8; }
+.css-lesson-page .swatch-white { background-color: #fff; }
+
+.css-lesson-page .role-grid div,
+.css-lesson-page .unit-grid article {
+    padding: 17px;
+    background-color: #f1f4f8;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.css-lesson-page .role-grid span,
+.css-lesson-page .unit-grid span {
+    display: block;
+    margin-top: 5px;
+    color: #5d6876;
+}
+
+.css-lesson-page .role-grid .current-author {
+    background-color: #dfeaff;
+    border: 2px solid #2d6cdf;
+}
+
+.css-lesson-page .flow-preview {
+    display: grid;
+    gap: 7px;
+    padding: 14px;
+    background-color: #eef3f7;
+    border: 2px dashed #718096;
+    border-radius: 8px;
+}
+
+.css-lesson-page .flow-preview span {
+    padding: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.css-lesson-page .flow-header { background-color: #1a2b4c; }
+.css-lesson-page .flow-content { min-height: 85px; background-color: #2d6cdf; }
+.css-lesson-page .flow-footer { background-color: #168aad; }
+
+.css-lesson-page .normal-flow-demo {
+    padding: 18px;
+    background-color: #f2f5f8;
+    border-left: 5px solid #168aad;
+}
+
+.css-lesson-page .normal-flow-demo > div {
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #cfe8f1;
+    border: 1px solid #168aad;
+}
+
+.css-lesson-page .normal-flow-demo span {
+    padding: 4px 7px;
+    background-color: #ffe0a8;
+    border: 1px solid #e58a25;
+}
+
+.css-lesson-page .demo-label {
+    padding: 8px;
+    background-color: #172033;
+    color: #fff;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.css-lesson-page .flex-demo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+    padding: 16px;
+    background-color: #e7f5f8;
+    border: 3px solid #168aad;
+    border-radius: 8px;
+}
+
+.css-lesson-page .flex-demo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #168aad;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.css-lesson-page .grid-method { background-color: #fdfcff; }
+
+.css-lesson-page .grid-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px;
+    background-color: #eee8f8;
+    border: 3px solid #8c62c4;
+    border-radius: 8px;
+}
+
+.css-lesson-page .grid-demo div {
+    padding: 18px 8px;
+    background-color: #8c62c4;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.css-lesson-page .grid-demo .grid-wide {
+    grid-column: 1 / 4;
+    background-color: #5f3b8e;
+}
+
+.css-lesson-page .table-wrapper { overflow-x: auto; }
+.css-lesson-page .table-wrapper table { width: 100%; }
+
+.css-lesson-page .unit-grid strong {
+    color: #168aad;
+    font-size: 24px;
+}
+
+.css-lesson-page .unit-line {
+    height: 7px;
+    margin-top: 16px;
+    background-color: #168aad;
+    border-radius: 5px;
+}
+
+.css-lesson-page .px-line { width: 80px; }
+.css-lesson-page .percent-line { width: 60%; }
+.css-lesson-page .rem-line { width: 6rem; }
+.css-lesson-page .viewport-line { width: 8vw; min-width: 55px; }
+
+.css-lesson-page .responsive-note {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #e7f5f8;
+    border-left: 4px solid #168aad;
+}
+
+@media (max-width: 750px) {
+    .css-lesson-page .intro-panel,
+    .css-lesson-page .box-model-section,
+    .css-lesson-page .visual-tools,
+    .css-lesson-page .layout-intro,
+    .css-lesson-page .layout-method {
+        grid-template-columns: 1fr;
+    }
+
+    .css-lesson-page .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .css-lesson-page .selector-grid,
+    .css-lesson-page .unit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .css-lesson-page .syntax-labels,
+    .css-lesson-page .role-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .css-lesson-page .before-after,
+    .css-lesson-page .selector-grid,
+    .css-lesson-page .unit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .css-lesson-page .lesson-panel { padding: 18px; }
+    .css-lesson-page .flex-demo div { width: 50px; height: 50px; }
+}
