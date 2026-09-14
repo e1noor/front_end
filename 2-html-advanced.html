@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-Dev Guide - HTML Advanced</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="main-header">
+        <h1>Web Development Guide</h1>
+        <nav class="nav-menu">
+            <a href="index.html">HTML Basics</a>
+            <a href="html-advanced.html">HTML Advanced</a>
+            <a href="css-basics.html">CSS Basics</a>
+            <a href="css-layout.html">CSS Layout</a>
+            <a href="js-basics.html">JS Basics</a>
+            <a href="js-dom.html">JS DOM</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <section>
+            <h2>2. Таблицы в HTML (Data Table)</h2>
+            <p>Mynau kestede oqu josparlary nemese komanda kestesinin mysaly keltirilgen:</p>
+            <table class="schedule-table">
+                <tr>
+                    <th>Kuni</th>
+                    <th>Taqyryp</th>
+                    <th>Zhauapty</th>
+                </tr>
+                <tr>
+                    <td>Dúysenbi</td>
+                    <td>HTML Basics</td>
+                    <td>[Atyńdy zhaz]</td>
+                </tr>
+                <tr>
+                    <td>Seysenbi</td>
+                    <td>CSS Basics</td>
+                    <td>Elnur</td>
+                </tr>
+                <tr>
+                    <td>Sarsenbi</td>
+                    <td>JavaScript</td>
+                    <td>Moveath</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Baylanys Formasy (Contact Form)</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Atyńdy zhaz">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="email@example.com">
+
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Habarlama..."></textarea>
+
+                <button type="submit">Jiberu / Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Team Members: [Atyńdy zhaz], Elnur, Moveath</p>
+    </footer>
+</body>
+</html>
