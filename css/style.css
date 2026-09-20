@@ -766,7 +766,8 @@ footer h2 {
 .css-lesson-page .page-sidebar {
     grid-area: sidebar;
     align-self: start;
-    position: static;
+    position: sticky;
+    top: 24px;
     padding: 22px;
     background-color: #ffffff;
     border: 1px solid #d9e0e8;
