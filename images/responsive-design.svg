@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">Responsive design illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e7f5f8"/>
+  <rect x="55" y="68" width="300" height="200" rx="16" fill="#ffffff" stroke="#1a2b4c" stroke-width="9"/>
+  <rect x="88" y="98" width="234" height="132" rx="8" fill="#2d6cdf"/>
+  <rect x="405" y="92" width="120" height="210" rx="22" fill="#ffffff" stroke="#1a2b4c" stroke-width="9"/>
+  <rect x="424" y="122" width="82" height="132" rx="8" fill="#14a38b"/>
+  <circle cx="465" cy="277" r="10" fill="#1a2b4c"/>
+</svg>

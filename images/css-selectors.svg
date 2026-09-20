@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">CSS selectors illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e8f1ff"/>
+  <rect x="55" y="58" width="490" height="244" rx="22" fill="#ffffff" stroke="#2d6cdf" stroke-width="8"/>
+  <text x="90" y="145" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="58px" font-weight="700">.card</text>
+  <text x="90" y="220" fill="#2d6cdf" font-family="Consolas, monospace" font-size="36px">{ color: blue; }</text>
+  <circle cx="485" cy="112" r="34" fill="#f6c344"/>
+</svg>
