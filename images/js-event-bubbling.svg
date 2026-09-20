@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">Event bubbling illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e7f5f8"/>
+  <rect x="70" y="55" width="460" height="250" rx="24" fill="#168aad" fill-opacity="0.28"/>
+  <rect x="140" y="100" width="320" height="160" rx="20" fill="#168aad" fill-opacity="0.55"/>
+  <rect x="210" y="140" width="180" height="80" rx="14" fill="#168aad"/>
+  <path d="M300 220v-110" stroke="#1a2b4c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M280 130l20-36 20 36z" fill="#1a2b4c"/>
+  <text x="175" y="335" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="24px" font-weight="700">EVENT BUBBLING</text>
+</svg>

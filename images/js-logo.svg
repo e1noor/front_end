@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title description">
+    <title id="title">JavaScript logo</title>
+    <desc id="description">A yellow circular badge with the letters JS and decorative code brackets</desc>
+    <circle cx="120" cy="120" r="116" fill="#f6c344"/>
+    <circle cx="120" cy="120" r="98" fill="#1a2b4c" stroke="#ffffff" stroke-width="5"/>
+    <text x="120" y="137" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700" text-anchor="middle">JS</text>
+    <text x="120" y="78" fill="#f6c344" font-family="Consolas, monospace" font-size="34" text-anchor="middle">( )</text>
+    <path d="M67 158 L48 174 L67 190" fill="none" stroke="#2d6cdf" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M173 158 L192 174 L173 190" fill="none" stroke="#2d6cdf" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

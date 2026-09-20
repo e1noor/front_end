@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">JavaScript functions illustration</title>
+  <rect width="600" height="360" rx="28" fill="#fff1d6"/>
+  <rect x="180" y="110" width="240" height="140" rx="20" fill="#2d6cdf"/>
+  <text x="228" y="192" fill="#ffffff" font-family="Consolas, monospace" font-size="34px">fn()</text>
+  <path d="M60 180h100" stroke="#1a2b4c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M140 160l30 20-30 20z" fill="#1a2b4c"/>
+  <path d="M440 180h100" stroke="#1a2b4c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M510 160l30 20-30 20z" fill="#1a2b4c"/>
+  <text x="188" y="330" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="28px" font-weight="700">FUNCTIONS</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">querySelector illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e8f1ff"/>
+  <rect x="55" y="58" width="490" height="244" rx="22" fill="#ffffff" stroke="#2d6cdf" stroke-width="8"/>
+  <text x="90" y="150" fill="#1a2b4c" font-family="Consolas, monospace" font-size="32px">querySelector</text>
+  <text x="90" y="215" fill="#2d6cdf" font-family="Consolas, monospace" font-size="36px">(".card")</text>
+  <circle cx="485" cy="112" r="34" fill="#168aad"/>
+</svg>

@@ -5,41 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Layout</title>
+    <link rel="icon" href="images/css-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="css-lesson-page">
-    <header id="main-header" class="layout-hero">
-        <div class="hero-content">
-            <img class="profile-img css-logo" src="images/css-logo.svg" alt="CSS logo">
-            <div>
-                <p class="eyebrow">Web Design Lesson</p>
-                <h1>CSS Layout</h1>
-                <p class="hero-subtitle">Normal flow, Flexbox, Grid, and responsive units</p>
-                <p class="page-author">Prepared by Yelnur Yessenali • SE-2514</p>
-            </div>
-        </div>
+<body class="css-lesson-page layout-page">
+    <header id="main-header" class="site-header">
+        <a class="site-brand" href="4-css-layout.html">
+            <img class="css-logo" src="images/css-logo.svg" alt="CSS logo">
+            <span>
+                <strong>Web Development Guide</strong>
+                <small>CSS lessons</small>
+            </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="1-index.html">HTML Basics</a></li>
+                <li><a href="2-html-advanced.html">HTML Advanced</a></li>
+                <li><a href="3-css-basics.html">CSS Basics</a></li>
+                <li><a class="active-link" href="4-css-layout.html">CSS Layout</a></li>
+                <li><a href="5-js-basics.html">JS Basics</a></li>
+                <li><a href="6-js-dom.html">JS DOM</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="nav-menu">
-        <h2>Navigation</h2>
-        <ul type="square">
-            <li><a href="1-index.html" target="_blank">HTML Basics</a></li>
-            <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
-            <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
-            <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
-            <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li>
-            <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li>
-        </ul>
-    </nav>
+    <aside class="page-sidebar">
+        <h2>CSS Layout</h2>
+        <nav aria-label="CSS Layout sections">
+            <a href="#layout-intro">Layout</a>
+            <a href="#normal-flow">Normal flow</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#grid">Grid</a>
+            <a href="#comparison">Comparison</a>
+            <a href="#gallery">Image gallery</a>
+        </nav>
 
-    <main class="css-page-content">
-        <section class="lesson-panel layout-intro">
+        <section class="practice-links">
+            <h3>Practice games</h3>
+            <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener noreferrer">Flexbox Froggy</a>
+            <a href="https://cssgridgarden.com/" target="_blank" rel="noopener noreferrer">Grid Garden</a>
+        </section>
+    </aside>
+
+    <main class="page-content">
+        <section class="lesson-panel layout-intro" id="layout-intro">
             <div>
-                <p class="section-number">01 • LAYOUT</p>
-                <h2>How elements find their place</h2>
+                <p class="section-number">01 - LAYOUT</p>
+                <h1>CSS Layout</h1>
                 <p><strong>CSS layout</strong> controls the size and position of elements.
                    A good layout creates clear groups, keeps enough space between them,
                    and adapts to different screen sizes.</p>
+                <p class="page-author">Prepared by Yelnur Yessenali - SE-2514</p>
             </div>
             <div class="flow-preview" aria-label="Normal document flow example">
                 <span class="flow-header">Header</span>
@@ -48,8 +65,8 @@
             </div>
         </section>
 
-        <section class="lesson-panel">
-            <p class="section-number">02 • NORMAL FLOW</p>
+        <section class="lesson-panel" id="normal-flow">
+            <p class="section-number">02 - NORMAL FLOW</p>
             <h2>The browser's default layout</h2>
             <p>Block elements normally take the available width and appear from top to bottom.
                Inline elements stay in the same line until there is no more space.</p>
@@ -60,16 +77,16 @@
             </div>
         </section>
 
-        <section class="lesson-panel layout-method">
+        <section class="lesson-panel layout-method" id="flexbox">
             <div class="method-copy">
-                <p class="section-number">03 • FLEXBOX</p>
+                <p class="section-number">03 - FLEXBOX</p>
                 <h2>One direction at a time</h2>
                 <p>Flexbox places items in a <strong>row</strong> or a <strong>column</strong>.
                    It is useful for navigation, buttons, and groups of cards.</p>
-                <ul type="square">
+                <ul>
                     <li><code>display: flex</code> starts a flex layout.</li>
-                    <li><code>justify-content</code> controls horizontal spacing.</li>
-                    <li><code>align-items</code> controls alignment.</li>
+                    <li><code>justify-content</code> controls main-axis spacing.</li>
+                    <li><code>align-items</code> controls cross-axis alignment.</li>
                     <li><code>gap</code> adds space between items.</li>
                 </ul>
             </div>
@@ -83,9 +100,9 @@
             </div>
         </section>
 
-        <section class="lesson-panel layout-method grid-method">
+        <section class="lesson-panel layout-method grid-method" id="grid">
             <div>
-                <p class="demo-label">display: grid; grid-template-columns: repeat(3, 1fr);</p>
+                <p class="demo-label">display: grid; grid-template-columns: 110px 110px 110px;</p>
                 <div class="grid-demo">
                     <div class="grid-wide">Header</div>
                     <div>Card 1</div>
@@ -95,7 +112,7 @@
                 </div>
             </div>
             <div class="method-copy">
-                <p class="section-number">04 • GRID</p>
+                <p class="section-number">04 - GRID</p>
                 <h2>Rows and columns together</h2>
                 <p>Grid creates a two-dimensional layout. It is a good choice for galleries,
                    dashboards, and page sections that must line up in both directions.</p>
@@ -107,8 +124,8 @@
             </div>
         </section>
 
-        <section class="lesson-panel">
-            <p class="section-number">05 • COMPARISON</p>
+        <section class="lesson-panel" id="comparison">
+            <p class="section-number">05 - COMPARISON</p>
             <h2>Choosing a layout method</h2>
             <div class="table-wrapper">
                 <table>
@@ -137,27 +154,65 @@
             </div>
         </section>
 
-        <section class="lesson-panel">
-            <p class="section-number">06 • RESPONSIVE UNITS</p>
-            <h2>Sizes that work on different screens</h2>
-            <div class="unit-grid">
-                <article><strong>px</strong><span>Fixed size</span><div class="unit-line px-line"></div></article>
-                <article><strong>%</strong><span>Part of the parent</span><div class="unit-line percent-line"></div></article>
-                <article><strong>rem</strong><span>Based on text size</span><div class="unit-line rem-line"></div></article>
-                <article><strong>vw / vh</strong><span>Part of the screen</span><div class="unit-line viewport-line"></div></article>
+        <section class="lesson-panel" id="gallery">
+            <p class="section-number">06 - GRID GALLERY</p>
+            <h2>CSS concept gallery</h2>
+            <p>The gallery uses equal-width Grid columns and equal-height rows. Move the pointer over an image to see its caption.</p>
+            <div class="image-gallery">
+                <figure class="gallery-item">
+                    <img src="images/css-selectors.svg" alt="CSS selectors">
+                    <figcaption class="gallery-caption">Selectors</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/css-box-model.svg" alt="CSS box model">
+                    <figcaption class="gallery-caption">Box Model</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/css-colors.svg" alt="CSS colors">
+                    <figcaption class="gallery-caption">Colors</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/css-spacing.svg" alt="CSS spacing">
+                    <figcaption class="gallery-caption">Spacing</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/flexbox-row.svg" alt="Flexbox row">
+                    <figcaption class="gallery-caption">Flexbox</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/grid-layout.svg" alt="CSS Grid layout">
+                    <figcaption class="gallery-caption">Grid</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/responsive-design.svg" alt="Responsive design">
+                    <figcaption class="gallery-caption">Responsive Design</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/hover-effect.svg" alt="CSS hover effect">
+                    <figcaption class="gallery-caption">Hover Effect</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/css-code.svg" alt="CSS code">
+                    <figcaption class="gallery-caption">CSS Code</figcaption>
+                </figure>
             </div>
-            <p class="responsive-note">The media query in <code>css/style.css</code> changes these
-               two-column sections into one column on a narrow screen.</p>
+        </section>
+
+        <section class="lesson-panel" id="responsive">
+            <p class="section-number">07 - RESPONSIVE DESIGN</p>
+            <h2>How this page adapts</h2>
+            <div class="unit-grid">
+                <article><strong>Desktop</strong><span>Sidebar and main content</span><div class="unit-line desktop-line"></div></article>
+                <article><strong>Tablet</strong><span>One page column</span><div class="unit-line tablet-line"></div></article>
+                <article><strong>Mobile</strong><span>One gallery column</span><div class="unit-line mobile-line"></div></article>
+            </div>
+            <p class="responsive-note">Media queries change the number of columns when the screen becomes narrower.</p>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <h2>Team Members</h2>
-        <ol type="I">
-            <li>Pribylyov Yegor</li>
-            <li>Nurdaulet Zhanybek</li>
-            <li>Yelnur Yessenali</li>
-        </ol>
+        <p>Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
         <p>CSS Layout page by Yelnur Yessenali</p>
     </footer>
 </body>

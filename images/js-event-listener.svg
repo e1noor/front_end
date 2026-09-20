@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">addEventListener illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e7f5f8"/>
+  <rect x="105" y="100" width="380" height="155" rx="24" fill="#168aad"/>
+  <text x="150" y="194" fill="#ffffff" font-family="Arial, sans-serif" font-size="38px" font-weight="700">CLICK ME</text>
+  <path d="M430 198l82 82-38 5-20 43-24-130z" fill="#ffffff" stroke="#1a2b4c" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M444 246l54 54" stroke="#1a2b4c" stroke-width="14" stroke-linecap="round"/>
+</svg>

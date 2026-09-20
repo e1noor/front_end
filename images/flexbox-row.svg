@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">Flexbox row illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e8f1ff"/>
+  <rect x="45" y="68" width="510" height="224" rx="20" fill="#ffffff" stroke="#168aad" stroke-width="8"/>
+  <rect x="78" y="110" width="120" height="140" rx="12" fill="#168aad"/>
+  <rect x="240" y="110" width="120" height="140" rx="12" fill="#2d6cdf"/>
+  <rect x="402" y="110" width="120" height="140" rx="12" fill="#8c62c4"/>
+  <text x="223" y="329" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="28px" font-weight="700">FLEX</text>
+</svg>

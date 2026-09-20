@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">innerHTML illustration</title>
+  <rect width="600" height="360" rx="28" fill="#172033"/>
+  <circle cx="66" cy="55" r="12" fill="#ff6b6b"/>
+  <circle cx="104" cy="55" r="12" fill="#f6c344"/>
+  <circle cx="142" cy="55" r="12" fill="#51cf66"/>
+  <text x="70" y="145" fill="#ffcc66" font-family="Consolas, monospace" font-size="32px">el.innerHTML =</text>
+  <text x="70" y="205" fill="#9ee493" font-family="Consolas, monospace" font-size="32px">"Hello!";</text>
+  <text x="70" y="265" fill="#75d5ff" font-family="Consolas, monospace" font-size="26px">// updates the page</text>
+</svg>

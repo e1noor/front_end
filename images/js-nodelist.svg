@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">NodeList illustration</title>
+  <rect width="600" height="360" rx="28" fill="#fff1d6"/>
+  <rect x="90" y="55" width="420" height="60" rx="10" fill="#e58a25"/>
+  <rect x="90" y="130" width="420" height="60" rx="10" fill="#f0a65a"/>
+  <rect x="90" y="205" width="420" height="60" rx="10" fill="#e58a25"/>
+  <text x="240" y="330" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="26px" font-weight="700">NODELIST</text>
+</svg>

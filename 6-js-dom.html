@@ -5,49 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript and DOM</title>
+    <link rel="icon" href="images/js-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header id="main-header">
-        <h1>Working with the DOM</h1>
+<body class="js-lesson-page dom-page">
+    <header id="main-header" class="site-header">
+        <a class="site-brand" href="6-js-dom.html">
+            <img class="js-logo" src="images/js-logo.svg" alt="JavaScript logo">
+            <span>
+                <strong>Web Development Guide</strong>
+                <small>JavaScript lessons</small>
+            </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">HTML Basics</a></li>
+                <li><a href="2-html-advanced.html">HTML Advanced</a></li>
+                <li><a href="3-css-basics.html">CSS Basics</a></li>
+                <li><a href="4-css-layout.html">CSS Layout</a></li>
+                <li><a href="5-js-basics.html">JS Basics</a></li>
+                <li><a class="active-link" href="6-js-dom.html">JS DOM</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="nav-menu">  
-        <h2>Navigation</h2>
-        <ul type="square">
-            <li><a href="1-index.html" target="_blank">HTML Basics</a></li>
-            <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
-            <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
-            <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
-            <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li> 
-            <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li> 
-        </ul>
-    </nav>
-    <main>
-        <section class="card about">
-            <h2>What is the DOM</h2>
+
+    <aside class="page-sidebar">
+        <h2>JS DOM</h2>
+        <nav aria-label="JS DOM sections">
+            <a href="#intro">What is DOM</a>
+            <a href="#why-dom">Why DOM</a>
+            <a href="#methods">Main methods</a>
+            <a href="#methods-table">Methods table</a>
+            <a href="#gallery">Concept gallery</a>
+            <a href="#team">Team</a>
+        </nav>
+
+        <section class="practice-links">
+            <h3>Practice &amp; docs</h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank" rel="noopener noreferrer">MDN DOM Guide</a>
+            <a href="https://jsfiddle.net/" target="_blank" rel="noopener noreferrer">JSFiddle Playground</a>
+        </section>
+    </aside>
+
+    <main class="page-content">
+        <section class="lesson-panel about" id="intro">
+            <p class="section-number">01 - INTRO</p>
+            <h1>Working with the DOM</h1>
             <p><strong>DOM (Document Object Model)</strong> is a representation of an HTML page as a
                tree of objects that JavaScript can work with. Each tag
                becomes a node of the tree, accessible for reading and modification through code.</p>
-
             <div>
                 <img src="images/dom.png" alt="DOM tree diagram">
             </div>
+            <p class="page-author">Prepared by Pribylyov Yegor - SE-2514</p>
+        </section>
 
-            <h3>Why the DOM is Needed</h3>
+        <section class="lesson-panel" id="why-dom">
+            <p class="section-number">02 - WHY THE DOM</p>
+            <h2>Why the DOM is Needed</h2>
             <p>Thanks to the DOM, JavaScript can change text, styles, add or
                remove elements on a page without reloading it this is the foundation
                of interactive websites.</p>
+        </section>
 
-            <h3>Main Methods</h3>
+        <section class="lesson-panel" id="methods">
+            <p class="section-number">03 - MAIN METHODS</p>
+            <h2>Main Methods</h2>
             <ul>
                 <li><code>getElementById()</code> - finds an element by its id</li>
                 <li><code>querySelector()</code> - finds an element by a CSS selector</li>
                 <li><code>addEventListener()</code> - adds an event handler (click, input, etc.)</li>
                 <li><code>innerHTML</code> - changes the content of an element</li>
             </ul>
+        </section>
 
-            <h3>DOM Methods Table</h3>
-            <div>
+        <section class="lesson-panel" id="methods-table">
+            <p class="section-number">04 - METHODS TABLE</p>
+            <h2>DOM Methods Table</h2>
+            <div class="table-wrapper">
                 <table>
                     <caption>DOM Methods Table</caption>
                     <tr>
@@ -73,8 +109,53 @@
                 </table>
             </div>
         </section>
-        <section class="card profile">
-            <br>
+
+        <section class="lesson-panel" id="gallery">
+            <p class="section-number">05 - GRID GALLERY</p>
+            <h2>DOM &amp; JavaScript concept gallery</h2>
+            <p>The gallery uses equal-width Grid columns and equal-height rows. Move the pointer over an image to see its caption.</p>
+            <div class="image-gallery">
+                <figure class="gallery-item">
+                    <img src="images/js-dom-tree.svg" alt="DOM tree diagram">
+                    <figcaption class="gallery-caption">DOM Tree</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-get-element.svg" alt="getElementById method">
+                    <figcaption class="gallery-caption">getElementById</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-query-selector.svg" alt="querySelector method">
+                    <figcaption class="gallery-caption">querySelector</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-event-listener.svg" alt="addEventListener method">
+                    <figcaption class="gallery-caption">addEventListener</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-innerhtml.svg" alt="innerHTML property">
+                    <figcaption class="gallery-caption">innerHTML</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-create-element.svg" alt="createElement method">
+                    <figcaption class="gallery-caption">createElement</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-nodelist.svg" alt="NodeList illustration">
+                    <figcaption class="gallery-caption">NodeList</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-event-bubbling.svg" alt="Event bubbling illustration">
+                    <figcaption class="gallery-caption">Event Bubbling</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/js-console-log.svg" alt="console.log illustration">
+                    <figcaption class="gallery-caption">console.log</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="lesson-panel profile" id="team">
+            <p class="section-number">TEAM CONTRIBUTION</p>
             <h3>About the Team Members</h3>
             <img class="profile-img" src="images/EMEMDANCE.jpg" alt="EMEMDANCE team logo">
             <ul>
@@ -85,13 +166,9 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <h2>Team Members</h2>
-        <ol type="I">
-            <li>Pribylyov Yegor</li>
-            <li>Nurdaulet Zhanybek</li>
-            <li>Yelnur Yessenali</li>
-        </ol>
+        <p>Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
         <p>JS - dom page by Pribylyov Yegor</p>
     </footer>
 </body>

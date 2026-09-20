@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600px" height="360px" viewBox="0 0 600 360" role="img" aria-labelledby="title">
+  <title id="title">DOM tree illustration</title>
+  <rect width="600" height="360" rx="28" fill="#e8f1ff"/>
+  <path d="M300 90 L180 180 M300 90 L420 180 M180 180 L110 260 M180 180 L250 260 M420 180 L370 260 M420 180 L490 260" stroke="#8c62c4" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="300" cy="90" r="34" fill="#1a2b4c"/>
+  <circle cx="180" cy="180" r="28" fill="#2d6cdf"/>
+  <circle cx="420" cy="180" r="28" fill="#2d6cdf"/>
+  <circle cx="110" cy="260" r="22" fill="#14a38b"/>
+  <circle cx="250" cy="260" r="22" fill="#14a38b"/>
+  <circle cx="370" cy="260" r="22" fill="#14a38b"/>
+  <circle cx="490" cy="260" r="22" fill="#14a38b"/>
+  <text x="222" y="335" fill="#1a2b4c" font-family="Arial, sans-serif" font-size="26px" font-weight="700">DOM TREE</text>
+</svg>
