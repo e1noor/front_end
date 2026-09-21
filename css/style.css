@@ -6,9 +6,7 @@ body {
     background-color: #f4f6f8;
     color: #222;
 }
-#nurdakrash {
-    text-align: right;
-}
+
 h1, h2, h3 {
     color: #1a2b4c;
 }
@@ -53,8 +51,6 @@ hr {
     margin: 20px 0;
 }
 
- 
-/* ===== 2. ID selector — уникальный элемент ===== */
 #main-header {
     background-color: #1a2b4c;
     color: #fff;
@@ -64,6 +60,7 @@ hr {
 
 #main-header h1 {
     color: #fff;
+    text-align: center;
 }
 
 #main-header hr {
@@ -77,77 +74,7 @@ hr {
     max-width: 450px;
     margin: 0 auto;
 }
-.card {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 24px auto;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
 
-.about {
-    border-left: 4px solid #2d6cdf;
-}
-
-.profile {
-    text-align: center;
-    background-color: #eef3fb;
-}
-
-.profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 12px 0;
-}
-
-.nav-menu {
-    background-color: #2d6cdf;
-    padding: 10px 0;
-}
-
-.nav-menu h2 {
-    color: #fff;
-    margin: 0 0 8px 0;
-}
-
-.nav-menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu ul li a {
-    display: inline-block;
-    padding: 10px 16px;
-    color: #fff;
-    border-radius: 4px;
-}
-
-.nav-menu ul li a:hover {
-    background-color: #1a4fa0;
-}
-
-.card ul li {
-    margin-bottom: 6px;
-}
-
-.card table td,
-.card table th {
-    border: 1px solid #ccc;
-}
-
-.profile ul li {
-    text-align: left;
-    max-width: 600px;
-    margin: 8px auto;
-}
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
@@ -179,33 +106,13 @@ hr {
     background-color: #1a4fa0;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a2b4c;
-    color: #fff;
-    margin-top: 40px;
-}
-
-footer hr {
-    border-top: 2px solid #ffffff55;
-}
-
-footer ol {
-    display: inline-block;
-    text-align: left;
-    padding-left: 20px;
-}
-footer h2 {
-    color: #fff;
-}
-
-.nav-menu h2 {
-    text-align: center;
-}
-
-#main-header h1 {
-    text-align: center;
+.card {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card h2,
@@ -218,6 +125,10 @@ footer h2 {
     text-align: center;
 }
 
+.card ul li {
+    margin-bottom: 6px;
+}
+
 .card table {
     margin-left: auto;
     margin-right: auto;
@@ -225,72 +136,90 @@ footer h2 {
 
 .card table td,
 .card table th {
+    border: 1px solid #ccc;
     text-align: center;
+}
+
+.about {
+    border-left: 4px solid #2d6cdf;
+}
+
+.profile {
+    text-align: center;
+    background-color: #eef3fb;
 }
 
 .profile h3 {
     text-align: center;
 }
 
-footer h2 {
+.profile ul li {
+    text-align: left;
+    max-width: 600px;
+    margin: 8px auto;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 12px 0;
+}
+
+.nav-menu {
+    background-color: #2d6cdf;
+    padding: 10px 0;
+}
+
+.nav-menu h2 {
+    color: #fff;
+    margin: 0 0 8px 0;
     text-align: center;
 }
 
-#main-header.css-hero,
-#main-header.layout-hero {
-    padding: 32px 20px;
-    background: linear-gradient(135deg, #1a2b4c, #2d6cdf);
-}
-
-
-.css-lesson-page .hero-content {
+.nav-menu ul {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.css-lesson-page .css-logo {
-    width: 105px;
-    height: 105px;
+    gap: 6px;
+    list-style: none;
     margin: 0;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    padding: 0;
 }
 
-.css-lesson-page .eyebrow,
-.css-lesson-page .hero-subtitle,
-.css-lesson-page .page-author {
-    margin: 3px 0;
-    color: #fff;
-}
-
-.css-lesson-page .eyebrow {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.css-lesson-page .hero-subtitle {
-    font-size: 18px;
-}
-
-.css-lesson-page .page-author {
+.nav-menu ul li a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 5px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 10px 16px;
+    color: #fff;
+    border-radius: 4px;
 }
 
-.css-lesson-page .css-page-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px 18px;
+.nav-menu ul li a:hover {
+    background-color: #1a4fa0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a2b4c;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer h2 {
+    color: #fff;
+    text-align: center;
+}
+
+footer hr {
+    border-top: 2px solid #ffffff55;
+}
+
+footer ol {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .css-lesson-page .lesson-panel {
@@ -622,52 +551,11 @@ footer h2 {
     border-radius: 5px;
 }
 
-.css-lesson-page .px-line { width: 80px; }
-.css-lesson-page .percent-line { width: 60%; }
-.css-lesson-page .rem-line { width: 6rem; }
-.css-lesson-page .viewport-line { width: 8vw; min-width: 55px; }
-
 .css-lesson-page .responsive-note {
     margin-top: 20px;
     padding: 12px;
     background-color: #e7f5f8;
     border-left: 4px solid #168aad;
-}
-
-@media (max-width: 750px) {
-    .css-lesson-page .intro-panel,
-    .css-lesson-page .box-model-section,
-    .css-lesson-page .visual-tools,
-    .css-lesson-page .layout-intro,
-    .css-lesson-page .layout-method {
-        grid-template-columns: 1fr;
-    }
-
-    .css-lesson-page .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .css-lesson-page .selector-grid,
-    .css-lesson-page .unit-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .css-lesson-page .syntax-labels,
-    .css-lesson-page .role-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .css-lesson-page .before-after,
-    .css-lesson-page .selector-grid,
-    .css-lesson-page .unit-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .css-lesson-page .lesson-panel { padding: 18px; }
-    .css-lesson-page .flex-demo div { width: 50px; height: 50px; }
 }
 
 /* ===== Assignment 2: Flexbox and Grid ===== */
@@ -683,21 +571,23 @@ footer h2 {
         "header header"
         "sidebar main"
         "footer footer";
-    grid-template-columns: 220px 900px;
+    grid-template-columns: minmax(200px, 220px) minmax(0, 900px);
     column-gap: 24px;
     row-gap: 24px;
-    justify-content: center;
-    margin: 0;
-    padding: 24px 0 0;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
     background-color: #edf2f7;
 }
 
 .css-lesson-page #main-header.site-header {
     grid-area: header;
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 18px 24px;
     background: linear-gradient(135deg, #1a2b4c, #2d6cdf);
     border-radius: 14px;
@@ -767,6 +657,7 @@ footer h2 {
 
 .css-lesson-page .page-sidebar {
     grid-area: sidebar;
+    min-width: 0;
     align-self: start;
     position: sticky;
     top: 24px;
@@ -815,11 +706,10 @@ footer h2 {
 
 .css-lesson-page .page-content {
     grid-area: main;
-    width: 900px;
+    min-width: 0;
 }
 
 .css-lesson-page .lesson-panel {
-    width: 900px;
     margin: 0 0 22px;
     padding: 26px;
     background-color: #ffffff;
@@ -858,35 +748,27 @@ footer h2 {
 .css-lesson-page .layout-intro,
 .css-lesson-page .layout-method {
     display: grid;
-    grid-template-columns: 400px 400px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     align-items: center;
 }
 
 .css-lesson-page .before-after {
     display: grid;
-    grid-template-columns: 190px 190px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-}
-
-.css-lesson-page .mini-browser {
-    width: 190px;
 }
 
 .css-lesson-page .syntax-labels {
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
 }
 
 .css-lesson-page .selector-grid {
     display: grid;
-    grid-template-columns: 190px 190px 190px 190px;
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
-}
-
-.css-lesson-page .selector-card {
-    width: 190px;
 }
 
 .css-lesson-page .card-row {
@@ -901,7 +783,8 @@ footer h2 {
 .css-lesson-page .topic-card {
     display: flex;
     flex-direction: column;
-    width: 260px;
+    flex: 1 1 220px;
+    max-width: 260px;
     overflow: hidden;
     background-color: #f8faff;
     border: 1px solid #ccd7e5;
@@ -916,7 +799,7 @@ footer h2 {
 }
 
 .css-lesson-page .topic-card img {
-    width: 258px;
+    width: 100%;
     height: 150px;
     border-radius: 0;
     object-fit: cover;
@@ -967,14 +850,15 @@ footer h2 {
 
 .css-lesson-page .role-grid {
     display: grid;
-    grid-template-columns: 260px 260px 260px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
 }
 
 .css-lesson-page .grid-demo {
     display: grid;
-    grid-template-columns: 110px 110px 110px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    max-width: 340px;
 }
 
 .css-lesson-page .grid-demo .grid-wide {
@@ -986,22 +870,19 @@ footer h2 {
 }
 
 .css-lesson-page .table-wrapper table {
-    width: 820px;
+    width: 100%;
 }
 
 .css-lesson-page .image-gallery {
     display: grid;
-    grid-template-columns: 260px 260px 260px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-auto-rows: 170px;
-    justify-content: center;
     gap: 18px;
     margin-top: 20px;
 }
 
 .css-lesson-page .gallery-item {
     position: relative;
-    width: 260px;
-    height: 170px;
     margin: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -1009,8 +890,9 @@ footer h2 {
 }
 
 .css-lesson-page .gallery-item img {
-    width: 260px;
-    height: 170px;
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 0;
     object-fit: cover;
     transition: transform 250ms ease;
@@ -1042,7 +924,7 @@ footer h2 {
 
 .css-lesson-page .unit-grid {
     display: grid;
-    grid-template-columns: 260px 260px 260px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
 }
 
@@ -1065,6 +947,7 @@ footer h2 {
 
 .css-lesson-page .site-footer {
     grid-area: footer;
+    min-width: 0;
     margin-top: 0;
     padding: 22px;
     border-radius: 14px 14px 0 0;
@@ -1075,31 +958,23 @@ footer h2 {
     margin: 4px 0;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 900px) {
     .css-lesson-page {
         grid-template-areas:
             "header"
             "sidebar"
             "main"
             "footer";
-        grid-template-columns: 900px;
-    }
-
-    .css-lesson-page #main-header.site-header {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .css-lesson-page .main-nav ul {
-        justify-content: center;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .css-lesson-page .page-sidebar {
         position: static;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap: 16px;
     }
 
     .css-lesson-page .page-sidebar nav,
@@ -1113,229 +988,46 @@ footer h2 {
         padding-top: 0;
         border-top: 0;
     }
-}
-
-@media (max-width: 920px) {
-    .css-lesson-page {
-        grid-template-columns: 760px;
-    }
-
-    .css-lesson-page .page-content,
-    .css-lesson-page .lesson-panel {
-        width: 760px;
-    }
-
-    .css-lesson-page .intro-panel,
-    .css-lesson-page .box-model-section,
-    .css-lesson-page .visual-tools,
-    .css-lesson-page .layout-intro,
-    .css-lesson-page .layout-method {
-        grid-template-columns: 340px 340px;
-    }
-
-    .css-lesson-page .before-after {
-        grid-template-columns: 155px 155px;
-    }
-
-    .css-lesson-page .mini-browser {
-        width: 155px;
-    }
-
-    .css-lesson-page .syntax-labels {
-        grid-template-columns: 220px 220px 220px;
-    }
 
     .css-lesson-page .selector-grid {
-        grid-template-columns: 165px 165px 165px 165px;
-    }
-
-    .css-lesson-page .selector-card {
-        width: 165px;
-        padding: 14px;
-    }
-
-    .css-lesson-page .topic-card {
-        width: 220px;
-    }
-
-    .css-lesson-page .topic-card img {
-        width: 218px;
-    }
-
-    .css-lesson-page .role-grid,
-    .css-lesson-page .unit-grid {
-        grid-template-columns: 220px 220px 220px;
-    }
-
-    .css-lesson-page .image-gallery {
-        grid-template-columns: 220px 220px 220px;
-        grid-auto-rows: 145px;
-    }
-
-    .css-lesson-page .gallery-item,
-    .css-lesson-page .gallery-item img {
-        width: 220px;
-        height: 145px;
-    }
-
-    .css-lesson-page .table-wrapper table {
-        width: 700px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 620px) {
     .css-lesson-page {
-        grid-template-columns: 560px;
+        padding: 14px 14px 0;
+        row-gap: 14px;
     }
 
-    .css-lesson-page .page-content,
-    .css-lesson-page .lesson-panel {
-        width: 560px;
-    }
-
-    .css-lesson-page .page-sidebar {
+    .css-lesson-page #main-header.site-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .css-lesson-page .intro-panel,
-    .css-lesson-page .box-model-section,
-    .css-lesson-page .visual-tools,
-    .css-lesson-page .layout-intro,
-    .css-lesson-page .layout-method {
-        grid-template-columns: 506px;
+    .css-lesson-page .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .css-lesson-page .before-after {
-        grid-template-columns: 235px 235px;
+    .css-lesson-page .page-sidebar {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .css-lesson-page .mini-browser {
-        width: 235px;
-    }
-
-    .css-lesson-page .syntax-labels {
-        grid-template-columns: 160px 160px 160px;
-    }
-
-    .css-lesson-page .selector-grid {
-        grid-template-columns: 235px 235px;
-    }
-
-    .css-lesson-page .selector-card {
-        width: 235px;
-    }
-
-    .css-lesson-page .topic-card {
-        width: 235px;
-    }
-
-    .css-lesson-page .topic-card img {
-        width: 233px;
-    }
-
-    .css-lesson-page .role-grid,
-    .css-lesson-page .unit-grid {
-        grid-template-columns: 235px 235px;
-    }
-
-    .css-lesson-page .image-gallery {
-        grid-template-columns: 235px 235px;
-        grid-auto-rows: 155px;
-    }
-
-    .css-lesson-page .gallery-item,
-    .css-lesson-page .gallery-item img {
-        width: 235px;
-        height: 155px;
-    }
-
-    .css-lesson-page .table-wrapper table {
-        width: 650px;
-    }
-}
-
-@media (max-width: 580px) {
-    .css-lesson-page {
-        grid-template-columns: 340px;
-        row-gap: 14px;
-        padding-top: 14px;
-    }
-
-    .css-lesson-page #main-header.site-header,
-    .css-lesson-page .page-sidebar,
-    .css-lesson-page .lesson-panel,
-    .css-lesson-page .site-footer {
-        border-radius: 10px;
-    }
-
-    .css-lesson-page .main-nav ul,
     .css-lesson-page .page-sidebar nav,
     .css-lesson-page .practice-links {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .css-lesson-page .page-content,
-    .css-lesson-page .lesson-panel {
-        width: 340px;
-    }
-
     .css-lesson-page .lesson-panel {
         padding: 16px;
     }
 
-    .css-lesson-page .intro-panel,
-    .css-lesson-page .box-model-section,
-    .css-lesson-page .visual-tools,
-    .css-lesson-page .layout-intro,
-    .css-lesson-page .layout-method {
-        grid-template-columns: 306px;
-    }
-
-    .css-lesson-page .before-after,
-    .css-lesson-page .syntax-labels,
-    .css-lesson-page .selector-grid,
-    .css-lesson-page .role-grid,
-    .css-lesson-page .unit-grid {
-        grid-template-columns: 276px;
-        justify-content: center;
-    }
-
-    .css-lesson-page .mini-browser,
-    .css-lesson-page .selector-card,
-    .css-lesson-page .topic-card {
-        width: 276px;
-    }
-
-    .css-lesson-page .topic-card img {
-        width: 274px;
-    }
-
-    .css-lesson-page .grid-demo {
-        grid-template-columns: 85px 85px 85px;
-    }
-
-    .css-lesson-page .image-gallery {
-        grid-template-columns: 276px;
-        grid-auto-rows: 180px;
-    }
-
-    .css-lesson-page .gallery-item,
-    .css-lesson-page .gallery-item img {
-        width: 276px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 370px) {
-    .css-lesson-page {
-        grid-template-columns: 300px;
-    }
-
-    .css-lesson-page .page-content,
-    .css-lesson-page .lesson-panel {
-        width: 300px;
+    .css-lesson-page .flex-demo div {
+        width: 50px;
+        height: 50px;
     }
 
     .css-lesson-page .intro-panel,
@@ -1348,33 +1040,7 @@ footer h2 {
     .css-lesson-page .selector-grid,
     .css-lesson-page .role-grid,
     .css-lesson-page .unit-grid {
-        grid-template-columns: 250px;
-    }
-
-    .css-lesson-page .mini-browser,
-    .css-lesson-page .selector-card,
-    .css-lesson-page .topic-card,
-    .css-lesson-page .gallery-item,
-    .css-lesson-page .gallery-item img {
-        width: 250px;
-    }
-
-    .css-lesson-page .topic-card img {
-        width: 248px;
-    }
-
-    .css-lesson-page .image-gallery {
-        grid-template-columns: 250px;
-        grid-auto-rows: 165px;
-    }
-
-    .css-lesson-page .gallery-item,
-    .css-lesson-page .gallery-item img {
-        height: 165px;
-    }
-
-    .css-lesson-page .grid-demo {
-        grid-template-columns: 70px 70px 70px;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1396,9 +1062,8 @@ footer h2 {
     row-gap: 24px;
     align-items: start;
     max-width: 1180px;
-    margin: 0 auto;
     padding: 24px 20px 0;
-    background-color: #f4f6f8;
+
 }
 
 /* Task 1 */
