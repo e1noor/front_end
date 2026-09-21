@@ -1404,6 +1404,7 @@ footer h2 {
 /* Task 1 */
 .js-lesson-page #main-header.site-header {
     grid-area: header;
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1480,6 +1481,7 @@ footer h2 {
 /* Task 3: page layout with grid areas */
 .js-lesson-page .page-sidebar {
     grid-area: sidebar;
+    min-width: 0;
     align-self: start;
     position: sticky;
     top: 20px;
@@ -1688,6 +1690,7 @@ footer h2 {
 
 .js-lesson-page .site-footer {
     grid-area: footer;
+    min-width: 0;
     margin-top: 0;
     padding: 22px;
     border-radius: 14px 14px 0 0;
@@ -1705,7 +1708,7 @@ footer h2 {
             "sidebar"
             "main"
             "footer";
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .js-lesson-page .page-sidebar {
@@ -1743,6 +1746,11 @@ footer h2 {
 
     .js-lesson-page .main-nav ul {
         justify-content: flex-start;
+    }
+
+    .js-lesson-page .page-sidebar {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .js-lesson-page .page-sidebar nav,
