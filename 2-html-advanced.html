@@ -2,91 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web-Dev Guide - HTML Advanced</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Advanced | Web Dev Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header id="main-header" class="flex-header">
-        <div class="logo">
-            <h1>Web Dev Guide</h1>
-        </div>
-        <nav class="nav-menu">
-            <ul class="nav-list" style="list-style: none; display: flex; gap: 15px;">
-                <li><a href="index.html" target="_blank">HTML Basics</a></li>
-                <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
-                <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
-                <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
-                <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li>
-                <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li>
-            </ul>
+<body class="assignment-page bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Web Dev Guide</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Open navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="index.html">HTML Basics</a>
+                        <a class="nav-link active" aria-current="page" href="2-html-advanced.html">HTML Advanced</a>
+                        <a class="nav-link" href="3-css-basics.html">CSS Basics</a>
+                        <a class="nav-link" href="4-css-layout.html">CSS Layout</a>
+                        <a class="nav-link" href="5-js-basics.html">JS Basics</a>
+                        <a class="nav-link" href="6-js-dom.html">JS DOM</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="content-container">
-        <section>
-            <h2>2. HTML Data Tables</h2>
-            <p>This table shows an example of a study schedule or team task matrix:</p>
-            <table class="schedule-table">
-                <tr>
-                    <th>Day</th>
-                    <th>Topic</th>
-                    <th>Responsible</th>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>HTML Basics</td>
-                    <td>Nurdaulet</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>CSS Basics</td>
-                    <td>Elnur</td>
-                </tr>
-                <tr>
-                    <td style="background-color: pink">Wednesday</td>
-                    <td>JavaScript</td>
-                    <td>Moveath</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <h2>Image Gallery (CSS Grid)</h2>
-            <div class="gallery-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=10" alt="1" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=11" alt="2" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=12" alt="3" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=13" alt="4" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=14" alt="5" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=15" alt="6" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=16" alt="7" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=17" alt="8" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/300/200?random=18" alt="9" style="width:100%; height:100px; object-fit:cover; border-radius: 4px;"></div>
+    <main class="container px-sm-2 py-3 py-lg-4">
+        <section class="bg-white border rounded p-3 p-lg-4 mt-lg-4 mb-4" id="intro">
+            <div class="row g-3 align-items-center">
+                <div class="col-sm-12 col-lg-6">
+                    <p class="text-primary fw-semibold mb-2">HTML LESSON 2</p>
+                    <h1>HTML Advanced</h1>
+                    <p>Tables organize related data, forms collect input, and semantic elements explain the purpose of each page section.</p>
+                    <p class="text-body-secondary">Prepared by Nurdaulet Zhanybek - SE-2514</p>
+                    <div class="btn-group" role="group" aria-label="HTML lessons">
+                        <a class="btn btn-outline-primary" href="index.html">Basics</a>
+                        <a class="btn btn-primary" href="2-html-advanced.html" aria-current="page">Advanced</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <img class="img-fluid rounded lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page sections" width="900" height="450">
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>Contact Form</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="table">
+            <h2>Study schedule</h2>
+            <p>The table uses a caption and column headings so every value is easy to understand.</p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle mb-0">
+                    <caption>Example team study schedule</caption>
+                    <thead class="table-dark">
+                        <tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Responsible</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Monday</td><td>HTML Basics</td><td>Nurdaulet Zhanybek</td></tr>
+                        <tr><td>Tuesday</td><td>CSS Basics</td><td>Yelnur Yessenali</td></tr>
+                        <tr><td>Wednesday</td><td>JavaScript</td><td>Pribylyov Yegor</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="email@example.com">
+        <section class="mb-4" id="more-topics">
+            <h2>More HTML elements</h2>
+            <div class="row g-3">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img class="card-img-top lesson-image" src="images/html-lists.svg" alt="Ordered HTML list" width="900" height="450">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Lists</h3>
+                            <p class="card-text">Group related items with <code>ul</code> or show a sequence with <code>ol</code>.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img class="card-img-top lesson-image" src="images/html-tables.svg" alt="HTML table with rows and columns" width="900" height="450">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Tables</h3>
+                            <p class="card-text">Use a table for real data with rows, cells, headings, and a caption.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img class="card-img-top lesson-image" src="images/html-forms.svg" alt="HTML form fields" width="900" height="450">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Forms</h3>
+                            <p class="card-text">Pair each input with a label so the form is clear and accessible.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <label for="color">Favorite Color:</label>
-                <input type="color" id="color" name="color">
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="gallery">
+            <h2>HTML concept gallery</h2>
+            <p>Nine illustrations show the main ideas from both HTML lessons.</p>
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div id="html-carousel" class="carousel carousel-dark slide" role="region" aria-label="Nine HTML illustrations">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: structure"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="1" aria-label="Slide 2: headings"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="2" aria-label="Slide 3: paragraphs"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="3" aria-label="Slide 4: links"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="4" aria-label="Slide 5: images"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="5" aria-label="Slide 6: lists"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="6" aria-label="Slide 7: tables"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="7" aria-label="Slide 8: forms"></button>
+                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="8" aria-label="Slide 9: semantic HTML"></button>
+                        </div>
+                        <div class="carousel-inner rounded border">
+                            <div class="carousel-item active"><img class="d-block w-100 lesson-image" src="images/html-structure.svg" alt="HTML document structure" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-headings.svg" alt="HTML heading example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-paragraphs.svg" alt="HTML paragraph example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-links.svg" alt="HTML link example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-images.svg" alt="HTML image example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-lists.svg" alt="HTML list example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-tables.svg" alt="HTML table example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-forms.svg" alt="HTML form example" width="900" height="450"></div>
+                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page example" width="900" height="450"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#html-carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#html-carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
-
-                <button type="submit">Submit</button>
+        <section class="bg-white border rounded p-3 p-lg-4" id="contact">
+            <h2>Practice contact form</h2>
+            <p class="text-body-secondary" id="form-help">This is a local practice form. The fields are not sent to a server.</p>
+            <form class="row g-3" action="#contact" method="get" aria-describedby="form-help">
+                <div class="col-sm-12 col-md-6">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label class="form-label" for="email">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text" aria-hidden="true">@</span>
+                        <input class="form-control" type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="topic">Topic</label>
+                    <select class="form-select" id="topic" name="topic">
+                        <option>HTML</option><option>CSS</option><option>JavaScript</option>
+                    </select>
+                </div>
+                <fieldset class="col-12">
+                    <legend class="fs-6">Learning level</legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="beginner" name="level" value="beginner" checked>
+                        <label class="form-check-label" for="beginner">Beginner</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="intermediate" name="level" value="intermediate">
+                        <label class="form-check-label" for="intermediate">Intermediate</label>
+                    </div>
+                </fieldset>
+                <div class="col-12">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="updates" name="updates">
+                        <label class="form-check-label" for="updates">I would like more practice examples</label>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-wrap align-items-center gap-2">
+                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="reset">Clear</button>
+                </div>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>Team Members: Nurdaulet, Elnur, Moveath</p>
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
+        <p class="m-0">HTML Advanced by Nurdaulet Zhanybek - SE-2514</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

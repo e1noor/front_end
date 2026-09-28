@@ -2,74 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web-Dev Guide - HTML Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Basics | Web Dev Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header id="main-header" class="flex-header">
-        <div class="logo">
-            <h1>Web Dev Guide</h1>
-        </div>
-        <nav class="nav-menu">
-            <ul class="nav-list" style="list-style: none; display: flex; gap: 15px;">
-                <li><a href="index.html" target="_blank">HTML Basics</a></li>
-                <li><a href="2-html-advanced.html" target="_blank">HTML Advanced</a></li>
-                <li><a href="3-css-basics.html" target="_blank">CSS Basics</a></li>
-                <li><a href="4-css-layout.html" target="_blank">CSS Layout</a></li>
-                <li><a href="5-js-basics.html" target="_blank">JS Basics</a></li>
-                <li><a href="6-js-dom.html" target="_blank">JS DOM</a></li>
-            </ul>
+<body class="assignment-page bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Web Dev Guide</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Open navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="index.html">HTML Basics</a>
+                        <a class="nav-link" href="2-html-advanced.html">HTML Advanced</a>
+                        <a class="nav-link" href="3-css-basics.html">CSS Basics</a>
+                        <a class="nav-link" href="4-css-layout.html">CSS Layout</a>
+                        <a class="nav-link" href="5-js-basics.html">JS Basics</a>
+                        <a class="nav-link" href="6-js-dom.html">JS DOM</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="content-container">
-        <section>
-            <h2>1. HTML Basics, Tags, and Structure</h2>
-            <p>HTML (HyperText Markup Language) is the standard language used to structure web page content. It forms the skeleton of every website.</p>
-            <img src="https://picsum.photos/300/200?random=1" alt="HTML Structure" class="profile-img" style="max-width: 250px; border-radius: 8px;">
-        </section>
-
-        <section>
-            <h2>Featured Topics (Card Row)</h2>
-            <div class="card-container" style="display: flex; gap: 20px; justify-content: space-between;">
-                <div class="card" style="flex: 1; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
-                    <img src="https://picsum.photos/300/150?random=2" alt="Card 1" style="width:100%; height:120px; object-fit:cover; border-radius: 4px;">
-                    <h3>HTML Tags</h3>
-                    <p>Learn core HTML elements.</p>
-                    <button>Read More</button>
+    <main class="container px-sm-2 py-3 py-lg-4">
+        <section class="bg-white border rounded p-3 p-lg-4 mt-lg-4 mb-4" id="intro">
+            <div class="row g-3 align-items-center">
+                <div class="col-sm-12 col-lg-6">
+                    <p class="text-primary fw-semibold mb-2">HTML LESSON 1</p>
+                    <h1>HTML Basics</h1>
+                    <p>HTML gives a webpage its structure. Elements tell the browser which parts are headings, paragraphs, links, images, and lists.</p>
+                    <p class="text-body-secondary">Prepared by Nurdaulet Zhanybek - SE-2514</p>
+                    <div class="btn-group" role="group" aria-label="HTML lessons">
+                        <a class="btn btn-primary" href="index.html" aria-current="page">Basics</a>
+                        <a class="btn btn-outline-primary" href="2-html-advanced.html">Advanced</a>
+                    </div>
                 </div>
-                <div class="card" style="flex: 1; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
-                    <img src="https://picsum.photos/300/150?random=3" alt="Card 2" style="width:100%; height:120px; object-fit:cover; border-radius: 4px;">
-                    <h3>CSS Styling</h3>
-                    <p>Master layouts and colors.</p>
-                    <button>Read More</button>
-                </div>
-                <div class="card" style="flex: 1; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
-                    <img src="https://picsum.photos/300/150?random=4" alt="Card 3" style="width:100%; height:120px; object-fit:cover; border-radius: 4px;">
-                    <h3>JavaScript</h3>
-                    <p>Add interactivity.</p>
-                    <button>Read More</button>
+                <div class="col-sm-12 col-lg-6">
+                    <pre class="bg-light border rounded p-3 mb-0"><code>&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href="about.html"&gt;Learn more&lt;/a&gt;</code></pre>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Student 1 Biography (Team Member)</h2>
-            <p>Created by team member: <strong>Nurdaulet</strong>. I completed the HTML portion of the Front-End part.</p>
+        <section class="mb-4" id="media-query-cards">
+            <h2>Three basic elements</h2>
+            <p>This group uses CSS media queries: one card on mobile, two on tablet, and three on desktop.</p>
+            <div class="media-card-grid">
+                <article class="media-card bg-white border rounded overflow-hidden">
+                    <img class="lesson-image" src="images/html-headings.svg" alt="Example of an HTML heading" width="900" height="450">
+                    <div class="p-3">
+                        <h3 class="h5">Headings</h3>
+                        <p>Use <code>h1</code> to <code>h6</code> to show the order of topics.</p>
+                        <a href="#structure">See page structure</a>
+                    </div>
+                </article>
+                <article class="media-card bg-white border rounded overflow-hidden">
+                    <img class="lesson-image" src="images/html-paragraphs.svg" alt="Example of an HTML paragraph" width="900" height="450">
+                    <div class="p-3">
+                        <h3 class="h5">Paragraphs</h3>
+                        <p>Use <code>p</code> to write readable blocks of text.</p>
+                        <a href="#text">See text elements</a>
+                    </div>
+                </article>
+                <article class="media-card bg-white border rounded overflow-hidden">
+                    <img class="lesson-image" src="images/html-links.svg" alt="Example of an HTML link" width="900" height="450">
+                    <div class="p-3">
+                        <h3 class="h5">Links</h3>
+                        <p>Use <code>a</code> to connect one page to another.</p>
+                        <a href="#links">See links and images</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>HTML Lists</h2>
-            <p>Two main tags are used to display lists in HTML:</p>
-            <ul>
-                <li><strong>Unordered list (ul):</strong> Bulleted list.</li>
-                <li><strong>Ordered list (ol):</strong> Numbered list.</li>
-            </ul>
+        <section class="row g-3 mb-4" aria-label="HTML topic cards">
+            <div class="col-sm-12 col-md-6 col-lg-4" id="structure">
+                <article class="card h-100">
+                    <img class="card-img-top lesson-image" src="images/html-structure.svg" alt="HTML document structure" width="900" height="450">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Page structure</h2>
+                        <p class="card-text">The <code>head</code> stores page information, while the <code>body</code> contains visible content.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4" id="text">
+                <article class="card h-100">
+                    <img class="card-img-top lesson-image" src="images/html-text.svg" alt="HTML text elements" width="900" height="450">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Text</h2>
+                        <p class="card-text">Headings organize ideas, paragraphs contain sentences, and <code>strong</code> marks important words.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4" id="links">
+                <article class="card h-100">
+                    <img class="card-img-top lesson-image" src="images/html-images.svg" alt="HTML image element" width="900" height="450">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Links and images</h2>
+                        <p class="card-text">Links use <code>href</code>. Images use <code>src</code> and meaningful <code>alt</code> text.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-white border rounded p-3 p-lg-4" id="lists">
+            <h2>HTML lists</h2>
+            <p>Use an unordered list for items without a fixed order, or an ordered list for steps.</p>
+            <div class="row g-3">
+                <div class="col-sm-12 col-lg-6">
+                    <h3 class="h5">Unordered list</h3>
+                    <ul class="mb-0"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <h3 class="h5">Ordered list</h3>
+                    <ol class="mb-0"><li>Write the HTML</li><li>Add CSS</li><li>Test the page</li></ol>
+                </div>
+            </div>
+            <a class="btn btn-outline-primary btn-sm mt-3" href="2-html-advanced.html">Continue to HTML Advanced</a>
         </section>
     </main>
 
-    <footer>
-        <p>Team Members: Nurdaulet, Elnur, Moveath</p>
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
+        <p class="m-0">HTML Basics by Nurdaulet Zhanybek - SE-2514</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
