@@ -1501,3 +1501,315 @@ body:not(.assignment-page) footer ol {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+/* CSS Basics and CSS Layout: the two pages share this one local stylesheet. */
+.css-topic-page {
+    --css-ink: #18324c;
+    --css-accent: #126f82;
+    --css-accent-dark: #0d5261;
+    --css-border: #dce6ee;
+    color: var(--css-ink);
+}
+
+.css-topic-page.bg-light {
+    background-color: var(--css-page-bg, #f2f6f9) !important;
+    transition: background-color 350ms ease;
+}
+
+.css-topic-page .navbar.bg-dark,
+.css-topic-page footer.bg-dark {
+    background: linear-gradient(110deg, #132b46, #173e54) !important;
+}
+
+.css-topic-page .navbar {
+    box-shadow: 0 4px 18px rgba(17, 45, 67, 0.14);
+}
+
+.css-topic-page .navbar-brand {
+    font-weight: 750;
+    letter-spacing: -0.025em;
+}
+
+.css-topic-page .navbar .nav-link {
+    border-radius: 0.5rem;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.css-topic-page .navbar .nav-link:hover,
+.css-topic-page .navbar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.css-topic-page main.container {
+    max-width: 1160px;
+}
+
+.css-topic-page main > section.bg-white {
+    border-color: var(--css-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 8px 28px rgba(24, 50, 76, 0.055);
+}
+
+.css-topic-page #intro {
+    overflow: hidden;
+    border-top: 5px solid var(--css-accent) !important;
+}
+
+.css-topic-page #intro .text-primary {
+    color: var(--css-accent) !important;
+    letter-spacing: 0.11em;
+    font-size: 0.78em;
+}
+
+.css-topic-page #intro h1 {
+    color: var(--css-ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 750;
+    letter-spacing: -0.045em;
+}
+
+.css-topic-page h2,
+.css-topic-page h3 {
+    color: var(--css-ink);
+}
+
+.css-topic-page main > section > h2 {
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.css-topic-page pre {
+    max-width: 100%;
+    overflow-x: auto;
+    color: #e6f4fb;
+    background-color: #19344d !important;
+    border-color: #19344d !important;
+    border-radius: 0.8rem !important;
+}
+
+.css-topic-page pre code {
+    color: inherit;
+}
+
+.css-topic-page .card {
+    overflow: hidden;
+    border: 1px solid var(--css-border);
+    border-radius: 0.9rem;
+    box-shadow: 0 5px 16px rgba(24, 50, 76, 0.055);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.css-topic-page .card:hover,
+.css-topic-page .card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(24, 50, 76, 0.14);
+}
+
+.css-topic-page .card .card-img-top {
+    border-radius: 0;
+}
+
+.css-topic-page .btn-primary {
+    background-color: var(--css-accent);
+    border-color: var(--css-accent);
+}
+
+.css-topic-page .btn-primary:hover,
+.css-topic-page .btn-primary:focus-visible {
+    background-color: var(--css-accent-dark);
+    border-color: var(--css-accent-dark);
+}
+
+.css-topic-page .btn-outline-primary {
+    color: var(--css-accent);
+    border-color: var(--css-accent);
+}
+
+.css-topic-page .btn-outline-primary:hover,
+.css-topic-page .btn-outline-primary:focus-visible {
+    color: #fff;
+    background-color: var(--css-accent);
+    border-color: var(--css-accent);
+}
+
+.css-topic-page #layout-carousel .carousel-inner {
+    overflow: hidden;
+    border-radius: 0.8rem !important;
+}
+
+.css-topic-page #comparison .table-dark {
+    --bs-table-bg: #18324c;
+}
+
+.css-topic-page footer {
+    margin-top: 2.5rem !important;
+}
+
+@media (max-width: 767px) {
+    .css-topic-page main.container {
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+    }
+
+    .css-topic-page main > section.bg-white {
+        border-radius: 0.85rem !important;
+    }
+
+    .css-topic-page #intro h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .css-topic-page .card,
+    .css-topic-page .navbar .nav-link {
+        transition: none;
+    }
+}
+
+/* Assignment 4 JavaScript demos on the CSS Basics and Layout pages. */
+.css-topic-page #js-lab {
+    border-top: 5px solid var(--css-accent) !important;
+    scroll-margin-top: 1rem;
+}
+
+.css-topic-page .js-lab-eyebrow {
+    color: var(--css-accent);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.11em;
+    margin-bottom: 0.45rem;
+}
+
+.css-topic-page .js-lab-panel {
+    background: #f8fbfd;
+    border: 1px solid var(--css-border);
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+}
+
+.css-topic-page .js-lab-panel h3 {
+    font-weight: 700;
+}
+
+.css-topic-page .js-lab-message {
+    min-height: 1.5em;
+    color: #9c3434;
+    font-weight: 600;
+}
+
+.css-topic-page .js-lab-message.is-success {
+    color: #176b43;
+}
+
+.css-topic-page .js-faq-item {
+    border-top: 1px solid var(--css-border);
+}
+
+.css-topic-page .js-faq-item:last-child {
+    border-bottom: 1px solid var(--css-border);
+}
+
+.css-topic-page .js-faq-item h4 {
+    margin: 0;
+}
+
+.css-topic-page .js-faq-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+    border: 0;
+    padding: 0.85rem 0;
+    background: transparent;
+    color: var(--css-ink);
+    font-size: 1rem;
+    font-weight: 650;
+    text-align: left;
+    cursor: pointer;
+}
+
+.css-topic-page .js-faq-trigger span {
+    color: var(--css-accent);
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: transform 250ms ease;
+}
+
+.css-topic-page .js-faq-trigger[aria-expanded="true"] span {
+    transform: rotate(45deg);
+}
+
+.css-topic-page .js-faq-answer {
+    overflow: hidden;
+    height: 0;
+    transition: height 250ms ease;
+}
+
+.css-topic-page .js-faq-answer[hidden] {
+    display: none;
+}
+
+.css-topic-page .js-faq-answer p {
+    padding: 0 0 0.9rem;
+    margin: 0;
+}
+
+.css-topic-page .js-live-clock {
+    display: block;
+    color: var(--css-accent-dark);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.css-topic-page.js-modal-open {
+    overflow: hidden;
+}
+
+.css-topic-page .js-modal-backdrop {
+    position: fixed;
+    z-index: 1050;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(12, 32, 49, 0.7);
+}
+
+.css-topic-page .js-modal-backdrop[hidden] {
+    display: none;
+}
+
+.css-topic-page .js-modal-dialog {
+    position: relative;
+    width: min(100%, 440px);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+}
+
+.css-topic-page .js-modal-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.8rem;
+    border: 0;
+    padding: 0 0.35rem;
+    background: transparent;
+    color: var(--css-ink);
+    font-size: 1.9rem;
+    line-height: 1.2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .css-topic-page.bg-light,
+    .css-topic-page .js-faq-answer,
+    .css-topic-page .js-faq-trigger span {
+        transition: none;
+    }
+}

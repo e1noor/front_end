@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="assignment-page bg-light">
+<body class="assignment-page css-topic-page bg-light">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
@@ -24,7 +24,6 @@
                         <a class="nav-link active" aria-current="page" href="4-css-layout.html">CSS Layout</a>
                         <a class="nav-link" href="5-js-basics.html">JS Basics</a>
                         <a class="nav-link" href="6-js-dom.html">JS DOM</a>
-                        <a class="nav-link" href="7-js-interactive.html">Interactive Lab</a>
                     </div>
                 </div>
             </div>
@@ -43,6 +42,7 @@
                         <a class="btn btn-outline-primary" href="3-css-basics.html">Basics</a>
                         <a class="btn btn-primary" href="4-css-layout.html" aria-current="page">Layout</a>
                     </div>
+                    <p class="mt-3 mb-0"><a class="fw-semibold" href="#js-lab">Try the JavaScript demos ↓</a></p>
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <img class="img-fluid rounded lesson-image" src="images/responsive-design.svg" alt="Responsive webpage on desktop, tablet, and mobile" width="900" height="450">
@@ -200,7 +200,53 @@
                 </div>
             </div>
         </section>
+
+        <section class="bg-white border rounded p-3 p-lg-4 mt-4" id="js-lab" aria-labelledby="js-lab-title">
+            <p class="js-lab-eyebrow">ASSIGNMENT 4 · INTERACTIVE JAVASCRIPT</p>
+            <h2 id="js-lab-title">Try JavaScript on this page</h2>
+            <p class="text-body-secondary">Open a popup, change the page background, and watch the live clock.</p>
+            <div class="row g-3 mt-1">
+                <div class="col-12 col-md-4">
+                    <div class="js-lab-panel h-100">
+                        <h3 class="h4">Subscription popup</h3>
+                        <p>Open the form, then close it with ×, Escape, or a click outside.</p>
+                        <button class="btn btn-primary" id="open-subscription" type="button">Open popup</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="js-lab-panel h-100">
+                        <h3 class="h4">Background colors</h3>
+                        <p>Click to cycle through four page colors.</p>
+                        <button class="btn btn-primary" id="change-background" type="button">Change background</button>
+                        <p class="js-lab-message mt-3 mb-0" id="background-status" role="status" aria-live="polite">Color 1 of 4: Mist</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="js-lab-panel h-100">
+                        <h3 class="h4">Live local date and time</h3>
+                        <p>This clock updates every second in your local time zone.</p>
+                        <time class="js-live-clock" id="live-clock" role="timer" aria-live="off">Loading time…</time>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <div class="js-modal-backdrop" id="subscription-modal" hidden>
+        <div class="js-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="subscription-title" tabindex="-1">
+            <button class="js-modal-close" id="close-subscription" type="button" aria-label="Close popup">×</button>
+            <p class="js-lab-eyebrow">SUBSCRIBE</p>
+            <h2 class="h3" id="subscription-title">Stay in the loop</h2>
+            <p>Enter an email address to try the subscription form.</p>
+            <form id="subscription-form" novalidate>
+                <label class="form-label" for="subscription-email">Email address</label>
+                <input class="form-control" id="subscription-email" type="email" autocomplete="email" required aria-describedby="subscription-email-error">
+                <div class="invalid-feedback" id="subscription-email-error"></div>
+                <button class="btn btn-primary mt-3" type="submit">Subscribe</button>
+                <p class="js-lab-message mt-3 mb-0" id="subscription-result" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
 
     <footer class="bg-dark text-white text-center p-3 mt-4">
         <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
@@ -208,5 +254,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/css-assignment.js" defer></script>
 </body>
 </html>
