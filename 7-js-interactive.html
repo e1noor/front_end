@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Interactive JavaScript examples: form validation, FAQ accordion, popup, background themes, and a live clock.">
+    <title>JavaScript Interactive Lab | Web Dev Guide</title>
+    <link rel="stylesheet" href="css/interactive.css">
+    <script src="js/interactive.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Web Dev Guide<span class="brand-dot">.</span></a>
+            <nav aria-label="Main navigation" class="site-nav">
+                <a href="index.html">HTML Basics</a>
+                <a href="2-html-advanced.html">HTML Advanced</a>
+                <a href="3-css-basics.html">CSS Basics</a>
+                <a href="4-css-layout.html">CSS Layout</a>
+                <a href="5-js-basics.html">JS Basics</a>
+                <a href="6-js-dom.html">JS DOM</a>
+                <a href="7-js-interactive.html" aria-current="page">Interactive Lab</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">ASSIGNMENT 04 / INTRODUCTION TO JAVASCRIPT</p>
+                <h1 id="page-title">Make the web <em>respond.</em></h1>
+                <p class="hero-copy">Five small interactions that turn a static page into something useful. Try the form, explore the questions, open a popup, change the mood, and watch the live clock.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#validation">Start exploring <span aria-hidden="true">↗</span></a>
+                    <button class="button button-ghost" type="button" id="open-subscribe">Subscribe for updates</button>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+                <div class="code-card"><span class="code-dots">● ● ●</span><code>const web = {<br>&nbsp;&nbsp;state: 'interactive',<br>&nbsp;&nbsp;you: 'in control'<br>};</code><span class="code-spark">✳</span></div>
+            </div>
+        </section>
+
+        <section class="feature-grid" aria-label="Interactive features">
+            <article class="panel panel-form" id="validation">
+                <div class="section-heading"><span class="step">01</span><div><p class="eyebrow">FORM VALIDATION</p><h2>Join the learning lab</h2></div></div>
+                <p class="section-copy">Enter your details to see clear, field-specific feedback. This is a local demo; nothing is sent or stored.</p>
+                <form id="registration-form" novalidate>
+                    <div class="field"><label for="register-name">Full name</label><input id="register-name" name="name" type="text" autocomplete="name" required aria-describedby="name-error"><small class="error" id="name-error" aria-live="polite"></small></div>
+                    <div class="field"><label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error"><small class="error" id="email-error" aria-live="polite"></small></div>
+                    <div class="field-row">
+                        <div class="field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="password-hint password-error"><small class="hint" id="password-hint">At least 8 characters.</small><small class="error" id="password-error" aria-live="polite"></small></div>
+                        <div class="field"><label for="register-confirm">Confirm password</label><input id="register-confirm" name="confirm" type="password" autocomplete="new-password" required aria-describedby="confirm-error"><small class="error" id="confirm-error" aria-live="polite"></small></div>
+                    </div>
+                    <button class="button button-primary form-submit" type="submit">Check registration <span aria-hidden="true">→</span></button>
+                    <p class="form-message" id="registration-message" role="status" aria-live="polite"></p>
+                </form>
+            </article>
+
+            <article class="panel panel-faq" id="faq">
+                <div class="section-heading"><span class="step">02</span><div><p class="eyebrow">ACCORDION</p><h2>Questions, answered</h2></div></div>
+                <p class="section-copy">Select a question to reveal its answer. Select it again to close it.</p>
+                <div class="faq-list">
+                    <div class="faq-item"><h3><button type="button" class="faq-trigger" id="faq-trigger-1" aria-expanded="false" aria-controls="faq-answer-1">What does JavaScript do on a webpage?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-trigger-1" hidden><div class="faq-answer-inner">JavaScript responds to actions, updates page content, checks input, and changes styles without reloading the page.</div></div></div>
+                    <div class="faq-item"><h3><button type="button" class="faq-trigger" id="faq-trigger-2" aria-expanded="false" aria-controls="faq-answer-2">Why validate a form?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-trigger-2" hidden><div class="faq-answer-inner">Validation helps people correct missing or invalid information before a form is processed. It also gives immediate, useful feedback.</div></div></div>
+                    <div class="faq-item"><h3><button type="button" class="faq-trigger" id="faq-trigger-3" aria-expanded="false" aria-controls="faq-answer-3">What is the DOM?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-trigger-3" hidden><div class="faq-answer-inner">The Document Object Model is the browser's representation of a page. JavaScript uses it to find and update elements.</div></div></div>
+                    <div class="faq-item"><h3><button type="button" class="faq-trigger" id="faq-trigger-4" aria-expanded="false" aria-controls="faq-answer-4">Does this demo save my information?<span class="faq-icon" aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-trigger-4" hidden><div class="faq-answer-inner">No. Both forms are demonstrations. They show feedback in your browser and do not send information to a server.</div></div></div>
+                </div>
+            </article>
+
+            <article class="panel panel-theme" id="theme">
+                <div class="section-heading"><span class="step">03</span><div><p class="eyebrow">BACKGROUND COLOR</p><h2>Change the mood</h2></div></div>
+                <p class="section-copy">Each click moves to the next color and updates the page background.</p>
+                <div class="swatches" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                <button class="button button-dark" id="change-color" type="button">Change background <span aria-hidden="true">↻</span></button>
+                <p class="theme-label" id="theme-label" role="status">Current color: Cloud</p>
+            </article>
+
+            <article class="panel panel-clock" id="clock">
+                <div class="section-heading"><span class="step">04</span><div><p class="eyebrow">LIVE DATE &amp; TIME</p><h2>Right now</h2></div></div>
+                <p class="section-copy">Your local date and time, refreshed every second.</p>
+                <time id="current-datetime" class="clock-display" aria-live="off">Loading current time…</time>
+                <p class="clock-note">Uses your device's local time zone.</p>
+            </article>
+
+            <article class="panel panel-popup" id="popup">
+                <div class="section-heading"><span class="step">05</span><div><p class="eyebrow">POPUP FORM</p><h2>Stay in the loop</h2></div></div>
+                <p class="section-copy">Open a subscription form in a popup. Close it with the button, Escape key, or a click outside.</p>
+                <button class="button button-primary" type="button" id="open-subscribe-secondary">Open subscription form <span aria-hidden="true">↗</span></button>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><p>Web Dev Guide · JavaScript Interactive Lab</p><p>Pribylyov Yegor · Nurdaulet Zhanybek · Yelnur Yessenali · SE-2514</p></div></footer>
+
+    <div class="modal-backdrop" id="subscribe-modal" hidden>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+            <button class="modal-close" id="close-subscribe" type="button" aria-label="Close subscription form">×</button>
+            <p class="eyebrow">POPUP SUBSCRIPTION</p>
+            <h2 id="modal-title">A little more JavaScript?</h2>
+            <p id="modal-description">Try the local subscription demo. Your address stays in this browser and is not submitted.</p>
+            <form id="subscribe-form" novalidate>
+                <div class="field"><label for="subscribe-email">Email address</label><input id="subscribe-email" type="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="subscribe-error"><small class="error" id="subscribe-error" aria-live="polite"></small></div>
+                <button class="button button-primary form-submit" type="submit">Subscribe <span aria-hidden="true">→</span></button>
+                <p class="form-message" id="subscribe-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
