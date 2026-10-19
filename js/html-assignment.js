@@ -1,4 +1,3 @@
-// Задание 1: проверка формы на HTML Advanced.
 const contactForm = document.getElementById("html-contact-form");
 
 if (contactForm) {
@@ -50,7 +49,6 @@ if (contactForm) {
             setError(messageInput, "Please enter a message.");
         }
 
-        // Если есть поле с ошибкой, переводим на него курсор.
         const firstError = contactForm.querySelector(".is-invalid");
         if (firstError) {
             result.textContent = "Please correct the highlighted fields.";
@@ -71,7 +69,6 @@ if (contactForm) {
     contactForm.addEventListener("reset", clearErrors);
 }
 
-// Задание 2: вопросы на HTML Basics.
 const questions = document.querySelectorAll(".html-question");
 for (let i = 0; i < questions.length; i = i + 1) {
     const question = questions[i];
@@ -82,7 +79,6 @@ for (let i = 0; i < questions.length; i = i + 1) {
     });
 }
 
-// Задание 3: окно подписки. Проверка if нужна, потому что файл общий для двух страниц.
 const popup = document.getElementById("html-popup");
 if (popup) {
     const openButton = document.getElementById("html-open-popup");
@@ -103,7 +99,6 @@ if (popup) {
             popup.close();
         }
     });
-    // HTML dialog также закрывается клавишей Escape.
     popup.addEventListener("close", function () {
         subscriptionForm.reset();
         result.textContent = "";
@@ -118,7 +113,6 @@ if (popup) {
     });
 }
 
-// Задание 4: выбираем следующий цвет из массива.
 const colorButton = document.getElementById("html-change-color");
 if (colorButton) {
     const colors = ["#f8f9fa", "#e7f2fc", "#e5f5ed", "#fff0e8"];
@@ -132,7 +126,6 @@ if (colorButton) {
     });
 }
 
-// Задание 5: показываем местное время и обновляем каждую секунду.
 const clock = document.getElementById("html-clock");
 if (clock) {
     function updateClock() {
