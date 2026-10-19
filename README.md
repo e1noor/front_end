@@ -2,18 +2,22 @@
 
 Static HTML, CSS, and JavaScript lessons by Pribylyov Yegor, Nurdaulet Zhanybek, and Yelnur Yessenali (SE-2514).
 
-## Assignment 4 - Interactive JavaScript Lab
+## Run the website
 
-Open `7-js-interactive.html` in a browser or visit the [published Interactive Lab](https://e1noor.github.io/front_end/7-js-interactive.html).
+Extract the project ZIP before opening `index.html` in a browser. No installation or build is needed. Internet access is needed for the existing Bootstrap CSS and JavaScript loaded from a CDN.
 
-The page demonstrates:
+Published website: https://e1noor.github.io/front_end/
 
-1. Registration form validation for required fields, email format, password length, and matching confirmation. Feedback appears beside each field.
-2. A four-question FAQ accordion with animated opening and closing.
-3. A subscription popup that closes with its close button, Escape, or a click on the backdrop.
-4. A background color button that cycles through four colors.
-5. A local date and time display that updates every second.
+## Assignment 4
 
-Both forms are browser-only demonstrations. They do not submit or store personal data.
+| Pages | Author | Components |
+| --- | --- | --- |
+| HTML Basics and HTML Advanced | Nurdaulet Zhanybek | FAQ, subscription popup, background colors, live clock, contact form validation |
+| CSS Basics and CSS Layout | Yelnur Yessenali | Registration form validation, FAQ, subscription popup, background colors, live clock |
+| JS Basics and JS DOM | Pribylyov Yegor | Feedback form validation, background colors, live clock, FAQ, subscription popup |
 
-The assignment report is in `output/pdf/assignment_4_report.pdf`. The submission archive is generated separately from the project source.
+Forms check required fields, email format, a password of at least 8 characters, and matching password confirmation. The contact and feedback forms also require a message. These are browser-only practice forms: they do not send or store input.
+
+Each popup closes with its Close button, Escape or a click on the backdrop. Answers open and close smoothly. Background colors cycle through four options, and clocks update every second using the visitor's local time.
+
+The submission ZIP includes the website in `project/`, the team report in `report/`, and original screenshots in `screenshots/`. The editable local report is `output/doc/Front_End_Assignment_4_Team_Report.docx`.

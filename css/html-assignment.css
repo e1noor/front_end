@@ -1,0 +1,76 @@
+/* Assignment 4: styles for HTML Basics and HTML Advanced. */
+.html-assignment-page {
+    background-color: #f8f9fa;
+    transition: background-color 300ms ease;
+}
+
+.html-assignment-page .html-faq-item {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.html-assignment-page .html-question {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 0;
+    border: 0;
+    background: transparent;
+    color: #0d6efd;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.html-assignment-page .html-question::after {
+    content: "+";
+}
+
+.html-assignment-page .html-question[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.html-assignment-page .html-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 300ms ease, visibility 300ms;
+}
+
+.html-assignment-page .html-answer.is-open {
+    grid-template-rows: 1fr;
+    visibility: visible;
+}
+
+.html-assignment-page .html-answer > div {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.html-assignment-page .html-answer p {
+    margin: 0;
+    padding-bottom: 14px;
+}
+
+.html-assignment-page #html-popup {
+    width: min(440px, calc(100% - 32px));
+    max-height: calc(100% - 32px);
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+}
+
+.html-assignment-page #html-popup::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.html-assignment-page .html-popup-content {
+    padding: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .html-assignment-page,
+    .html-assignment-page .html-answer {
+        transition: none;
+    }
+}

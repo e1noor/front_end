@@ -6,8 +6,9 @@
     <title>HTML Basics | Web Dev Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html-assignment.css">
 </head>
-<body class="assignment-page bg-light">
+<body class="assignment-page html-assignment-page">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
@@ -23,7 +24,6 @@
                         <a class="nav-link" href="4-css-layout.html">CSS Layout</a>
                         <a class="nav-link" href="5-js-basics.html">JS Basics</a>
                         <a class="nav-link" href="6-js-dom.html">JS DOM</a>
-                        <a class="nav-link" href="7-js-interactive.html">Interactive Lab</a>
                     </div>
                 </div>
             </div>
@@ -48,6 +48,40 @@
 &lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;a href="about.html"&gt;Learn more&lt;/a&gt;</code></pre>
                 </div>
+            </div>
+        </section>
+
+        <!-- Assignment 4: background color, live clock, accordion and popup. -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="html-lab">
+            <h2>HTML practice tools</h2>
+            <p>Your local date and time: <time id="html-clock">Loading...</time></p>
+            <button class="btn btn-outline-primary" id="html-change-color" type="button">Change background</button>
+            <p class="text-body-secondary mt-2 mb-0">Click to cycle through four light background colors.</p>
+        </section>
+
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="html-faq">
+            <h2>HTML questions</h2>
+            <p>Click a question to show or hide its answer.</p>
+            <div class="html-faq-item">
+                <h3 class="h5 mb-0"><button class="html-question" type="button" aria-expanded="false" aria-controls="html-answer-1">What does HTML do?</button></h3>
+                <div class="html-answer" id="html-answer-1"><div><p>HTML gives a page its structure. It describes headings, paragraphs, links, images and forms.</p></div></div>
+            </div>
+            <div class="html-faq-item">
+                <h3 class="h5 mb-0"><button class="html-question" type="button" aria-expanded="false" aria-controls="html-answer-2">What is an HTML attribute?</button></h3>
+                <div class="html-answer" id="html-answer-2"><div><p>An attribute adds information to an element. For example, href tells a link which page to open, and alt describes an image.</p></div></div>
+            </div>
+            <div class="html-faq-item">
+                <h3 class="h5 mb-0"><button class="html-question" type="button" aria-expanded="false" aria-controls="html-answer-3">Why do forms need labels?</button></h3>
+                <div class="html-answer" id="html-answer-3"><div><p>A label explains what to enter in a field. Its for attribute connects it to the input with the matching id.</p></div></div>
+            </div>
+        </section>
+
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="html-subscribe">
+            <h2>Keep practising HTML</h2>
+            <p>Open a practice subscription form or try the contact form in the next lesson.</p>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" id="html-open-popup" type="button">Subscribe</button>
+                <a class="btn btn-outline-primary" href="2-html-advanced.html#contact">Try form validation</a>
             </div>
         </section>
 
@@ -129,11 +163,28 @@
         </section>
     </main>
 
+    <dialog id="html-popup" aria-labelledby="html-popup-title" aria-describedby="html-popup-help">
+        <div class="html-popup-content">
+            <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+                <h2 class="h4 mb-0" id="html-popup-title">HTML practice updates</h2>
+                <button class="btn btn-outline-secondary btn-sm" id="html-close-popup" type="button" aria-label="Close subscription form">Close</button>
+            </div>
+            <p id="html-popup-help">Practice only: your email is not sent or saved.</p>
+            <form id="html-subscription-form">
+                <label class="form-label" for="html-subscription-email">Your email</label>
+                <input class="form-control mb-3" id="html-subscription-email" type="email" autocomplete="email" required>
+                <button class="btn btn-primary" type="submit">Check email</button>
+                <p class="text-success mt-3 mb-0" id="html-subscription-result" role="status"></p>
+            </form>
+        </div>
+    </dialog>
+
     <footer class="bg-dark text-white text-center p-3 mt-4">
         <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
         <p class="m-0">HTML Basics by Nurdaulet Zhanybek - SE-2514</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/html-assignment.js"></script>
 </body>
 </html>
