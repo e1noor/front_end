@@ -8,6 +8,12 @@ Extract the project ZIP before opening `index.html` in a browser. No installatio
 
 Published website: https://e1noor.github.io/front_end/
 
+## Assignment 5 - Pribylyov Yegor
+
+JS Basics has a lesson filter and a two-step study plan form. JS DOM has Read More, a five-star rating, a moving box, and a notification sound. Use the arrow keys while a navigation link is focused to move between menu items on either page.
+
+The new features use shared `js/js-assignment.js` and `css/js-assignment.css`. The lesson library demonstrates an object with a method, an array, a loop, and a `filter` callback. The menu uses `switch`, and the study form keeps input when moving between steps. The sound uses one local audio element, so repeated clicks restart it without overlapping. Earlier Assignment 4 features remain available.
+
 ## Assignment 4
 
 | Pages | Author | Components |

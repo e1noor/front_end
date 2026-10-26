@@ -21,7 +21,7 @@ feedbackForm.addEventListener("submit", function (event) {
 
     if (nameInput.value.trim() === "") {
         showError("Please enter your name.", nameInput);
-        return; // Останавливаем проверку до исправления ошибки.
+        return;
     }
 
 
