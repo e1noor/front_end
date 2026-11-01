@@ -8,8 +8,12 @@
     <link rel="icon" href="images/js-logo.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/js-assignment.css">
+    <!-- Assignment 6, Task 0 -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 </head>
 <body class="js-assignment-page">
+    <!-- Assignment 6, Task 4 -->
+    <div class="scroll-progress" id="scroll-progress"></div>
     <!-- Task 5: the same Bootstrap navbar on both of my pages. -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
@@ -48,6 +52,17 @@
                 <div class="col-lg-6 text-center">
                     <img class="img-fluid rounded" src="images/dom.png" alt="DOM tree diagram" width="400">
                 </div>
+            </div>
+        </section>
+
+        <!-- Assignment 6, Task 5 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="stats">
+            <h2>Our guide in numbers</h2>
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="6">0</span></p><p class="mb-0">lessons</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="3">0</span></p><p class="mb-0">authors</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="9">0</span></p><p class="mb-0">jQuery features</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="4000">0</span>+</p><p class="mb-0">lines of code</p></div>
             </div>
         </section>
 
@@ -124,7 +139,7 @@
             <h2>Main DOM methods</h2>
             <div class="card-group">
                 <article class="card">
-                    <img class="card-img-top" src="images/js-get-element.svg" alt="Find an element by its ID">
+                    <img class="card-img-top lazy" src="images/placeholder.svg" data-src="images/js-get-element.svg" alt="Find an element by its ID" width="600" height="360">
                     <div class="card-body">
                         <h3 class="card-title h5">Find an element</h3>
                         <p class="card-text"><code>getElementById()</code> finds one element by its ID. <code>querySelector()</code> uses a CSS selector.</p>
@@ -132,7 +147,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img class="card-img-top" src="images/js-innerhtml.svg" alt="Change the content of an element">
+                    <img class="card-img-top lazy" src="images/placeholder.svg" data-src="images/js-innerhtml.svg" alt="Change the content of an element" width="600" height="360">
                     <div class="card-body">
                         <h3 class="card-title h5">Change content</h3>
                         <p class="card-text"><code>textContent</code> changes plain text. <code>innerHTML</code> can insert HTML markup.</p>
@@ -140,7 +155,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img class="card-img-top" src="images/js-event-listener.svg" alt="Listen for a button click">
+                    <img class="card-img-top lazy" src="images/placeholder.svg" data-src="images/js-event-listener.svg" alt="Listen for a button click" width="600" height="360">
                     <div class="card-body">
                         <h3 class="card-title h5">Handle events</h3>
                         <p class="card-text"><code>addEventListener()</code> runs a function when a user clicks or submits a form.</p>
@@ -164,6 +179,24 @@
                         <tr><td>addEventListener</td><td>Listens for an event</td><td>React to a click</td></tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <!-- Assignment 6, Task 8 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="code-examples">
+            <h2>Copy DOM examples</h2>
+            <p>Copy a line and paste it into the browser console on this page.</p>
+            <div class="code-snippet mb-3">
+                <pre class="bg-light border rounded p-3 mb-0"><code>document.getElementById("intro").style.border = "3px solid red";</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
+            </div>
+            <div class="code-snippet mb-3">
+                <pre class="bg-light border rounded p-3 mb-0"><code>document.querySelectorAll(".card").length;</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
+            </div>
+            <div class="code-snippet">
+                <pre class="bg-light border rounded p-3 mb-0"><code>document.body.style.backgroundColor = "lightyellow";</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
             </div>
         </section>
 
@@ -209,7 +242,7 @@
         <!-- Task 3: desktop: three columns; tablet: two; mobile: one. -->
         <section class="bg-white rounded p-3 p-lg-4" id="team">
             <h2>About the team</h2>
-            <img class="img-fluid rounded mb-3" src="images/EMEMDANCE.jpg" alt="EMEMDANCE team logo" width="100">
+            <img class="img-fluid rounded mb-3 lazy" src="images/placeholder.svg" data-src="images/EMEMDANCE.jpg" alt="EMEMDANCE team logo" width="100" height="100">
             <div class="row g-3">
                 <div class="col-sm-12 col-md-6 col-lg-4"><h3 class="h5">Pribylyov Yegor</h3><p class="mb-0">JS Basics and JS DOM pages.</p></div>
                 <div class="col-sm-12 col-md-6 col-lg-4"><h3 class="h5">Nurdaulet Zhanybek</h3><p class="mb-0">HTML Basics and HTML Advanced pages.</p></div>
@@ -241,6 +274,5 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/js-dom.js"></script>
-    <script src="js/js-assignment.js"></script>
 </body>
 </html>

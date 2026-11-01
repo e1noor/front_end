@@ -8,11 +8,18 @@ Extract the project ZIP before opening `index.html` in a browser. No installatio
 
 Published website: https://e1noor.github.io/front_end/
 
+## Assignment 6 - Pribylyov Yegor
+
+jQuery 4.0.0 is loaded from the official CDN in the `<head>` of JS Basics and JS DOM. The code runs inside `$(document).ready()` at the end of `js/js-basics.js` and `js/js-dom.js`. Styles are in `css/js-assignment.css`.
+
+- JS Basics: live term search with autocomplete suggestions and highlighting, a scroll progress bar, a Submit button with a spinner, and a toast message.
+- JS DOM: a scroll progress bar, animated counters, Copy buttons with a "Copied to clipboard!" tooltip, and lazy-loaded images.
+
 ## Assignment 5 - Pribylyov Yegor
 
 JS Basics has a lesson filter and a two-step study plan form. JS DOM has Read More, a five-star rating, a moving box, and a notification sound. Use the arrow keys while a navigation link is focused to move between menu items on either page.
 
-The new features use shared `js/js-assignment.js` and `css/js-assignment.css`. The lesson library demonstrates an object with a method, an array, a loop, and a `filter` callback. The menu uses `switch`, and the study form keeps input when moving between steps. The sound uses one local audio element, so repeated clicks restart it without overlapping. Earlier Assignment 4 features remain available.
+Assignment 5 code is in the existing `js/js-basics.js` and `js/js-dom.js` files, after Assignment 4. Both pages use `css/js-assignment.css`. The lesson library demonstrates an object with a method, an array, a loop, and a `filter` callback. The menu uses `switch`, and the study form keeps input when moving between steps. The sound uses one local audio element, so repeated clicks restart it without overlapping. Earlier Assignment 4 features remain available.
 
 ## Assignment 4
 

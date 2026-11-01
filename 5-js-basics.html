@@ -8,8 +8,12 @@
     <link rel="icon" href="images/js-logo.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/js-assignment.css">
+    <!-- Assignment 6, Task 0 -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 </head>
 <body class="js-assignment-page">
+    <!-- Assignment 6, Task 4 -->
+    <div class="scroll-progress" id="scroll-progress"></div>
     <!-- Task 5: six links; the menu collapses below 992px. -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
@@ -52,6 +56,27 @@
             <p>Your local date and time: <time id="current-date-time">Loading...</time></p>
             <button class="btn btn-outline-primary" type="button" id="change-background">Change background color</button>
             <p class="text-body-secondary mt-2 mb-0">Click to cycle through four light background colors.</p>
+        </section>
+
+        <!-- Assignment 6, Tasks 1-3 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="term-search-section">
+            <h2>Search JavaScript terms</h2>
+            <label class="form-label" for="term-search">Type a word, for example "array"</label>
+            <div class="search-box mb-3">
+                <input class="form-control" type="text" id="term-search" autocomplete="off">
+                <ul class="search-suggestions" id="term-suggestions"></ul>
+            </div>
+            <p id="term-count" role="status">Terms found: 8</p>
+            <ul class="list-group" id="term-list">
+                <li class="list-group-item">Variable - a named place that stores a value.</li>
+                <li class="list-group-item">Function - a block of code that can be used again.</li>
+                <li class="list-group-item">Array - a list of values stored in one variable.</li>
+                <li class="list-group-item">Object - a group of named properties and methods.</li>
+                <li class="list-group-item">Loop - code that repeats an action many times.</li>
+                <li class="list-group-item">Event - an action such as a click or a key press.</li>
+                <li class="list-group-item">String - text written inside quotes.</li>
+                <li class="list-group-item">Boolean - a value that is true or false.</li>
+            </ul>
         </section>
 
         <section class="mb-4" id="topic-cards">
@@ -156,6 +181,17 @@
             </form>
         </section>
 
+        <!-- Assignment 6, Tasks 6-7 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="question">
+            <h2>Ask a question</h2>
+            <p class="text-body-secondary">Practice form: your question is not sent or saved.</p>
+            <form id="question-form">
+                <label class="form-label" for="question-text">Your question</label>
+                <input class="form-control mb-3" id="question-text" required>
+                <button class="btn btn-primary" type="submit" id="question-submit">Submit</button>
+            </form>
+        </section>
+
         <!-- Assignment 4, task 1: JavaScript checks the form before showing success. -->
         <section class="bg-white rounded p-3 p-lg-4" id="feedback">
             <h2>Feedback form</h2>
@@ -221,8 +257,9 @@
         <p class="mb-2">JS Basics by Pribylyov Yegor - SE-2514</p>
         <a class="link-light" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript Guide</a>
     </footer>
+    <!-- Assignment 6, Task 7 -->
+    <div class="toast-message" id="toast" role="status"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/js-basics.js"></script>
-    <script src="js/js-assignment.js"></script>
 </body>
 </html>
