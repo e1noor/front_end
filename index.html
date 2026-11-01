@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/html-assignment.css">
+    <link rel="stylesheet" href="css/js-assignment.css">
 </head>
 <body class="assignment-page html-assignment-page">
     <header>
@@ -49,6 +50,49 @@
 &lt;a href="about.html"&gt;Learn more&lt;/a&gt;</code></pre>
                 </div>
             </div>
+        </section>
+
+        <!-- Assignment 5, tasks 2-3 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="lesson-picker">
+            <h2>Choose an HTML lesson</h2>
+            <label class="form-label" for="lesson-category">Topic</label>
+            <select class="form-select mb-3" id="lesson-category">
+                <option value="all">All topics</option>
+                <option value="html" selected>HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+            <p id="lesson-count" role="status"></p>
+            <ul id="lesson-list" class="mb-0"></ul>
+        </section>
+
+        <!-- Assignment 5, tasks 1-2 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="study-plan">
+            <h2>Plan your HTML practice</h2>
+            <p>Choose your next topic in two steps. Your answers stay on this page only.</p>
+            <p id="study-progress" role="status">Step 1 of 2</p>
+            <form id="study-form" novalidate>
+                <fieldset class="study-step">
+                    <legend class="h5">Your name</legend>
+                    <label class="form-label" for="study-name">What should we call you?</label>
+                    <input class="form-control mb-3" id="study-name" name="student" autocomplete="given-name" required>
+                </fieldset>
+                <fieldset class="study-step" hidden>
+                    <legend class="h5">Your next topic</legend>
+                    <label class="form-label" for="study-topic">What do you want to learn?</label>
+                    <select class="form-select mb-3" id="study-topic" name="topic" required>
+                        <option value="">Choose a topic</option>
+                        <option value="Headings and links">Headings and links</option>
+                        <option value="Lists and images">Lists and images</option>
+                        <option value="Page structure">Page structure</option>
+                    </select>
+                </fieldset>
+                <button class="btn btn-outline-primary" type="button" id="study-back" hidden>Back</button>
+                <button class="btn btn-primary" type="button" id="study-next">Next</button>
+                <button class="btn btn-primary" type="submit" id="study-finish" hidden>Create plan</button>
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                <p class="mt-3 mb-0 text-success" id="study-result" role="status"></p>
+            </form>
         </section>
 
         <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="html-lab">

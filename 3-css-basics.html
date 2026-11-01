@@ -7,8 +7,13 @@
     <link rel="icon" href="images/css-logo.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/js-assignment.css">
+    <link rel="stylesheet" href="css/css-jquery.css">
+    <!-- Assignment 6, task 0: the full build includes jQuery animations. -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" defer></script>
 </head>
 <body class="assignment-page css-topic-page bg-light">
+    <div class="jq-reading-progress" id="css-reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
@@ -53,13 +58,135 @@
             </div>
         </section>
 
+        <!-- Assignment 6, tasks 1-7: searchable CSS notes and practice tools. -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="jquery-lab" aria-labelledby="jquery-lab-title">
+            <p class="js-lab-eyebrow">ASSIGNMENT 6 / JQUERY</p>
+            <h2 id="jquery-lab-title">Find your next CSS topic</h2>
+            <p id="jquery-status" role="status">Loading practice tools...</p>
+            <noscript><p>Enable JavaScript to search the notes and use the practice tools.</p></noscript>
+            <div class="jq-search-wrap">
+                <label class="form-label" for="css-search">Search topics</label>
+                <div class="jq-search-row">
+                    <input class="form-control" id="css-search" type="search" placeholder="Try a CSS keyword..." autocomplete="off" maxlength="100" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="css-suggestions" aria-expanded="false" aria-describedby="css-search-hint">
+                    <button class="btn btn-outline-primary" id="css-search-clear" type="button">Clear</button>
+                </div>
+                <ul class="jq-suggestions" id="css-suggestions" role="listbox" aria-label="CSS topic suggestions" hidden></ul>
+            </div>
+            <p class="form-text" id="css-search-hint">Matches are highlighted in these notes. Use the arrow keys and Enter to select a suggestion.</p>
+            <p class="jq-status" id="css-search-count" role="status" aria-live="polite">6 of 6 topics found</p>
+            <p id="css-search-empty" hidden>No matching topics. Try another keyword or clear the search.</p>
+            <div class="jq-topics">
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">Element selectors</h3>
+                    <p class="jq-search-text">Style all elements of one type, such as every paragraph.</p>
+                    <a href="#selectors">Open lesson</a>
+                </article>
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">Class selectors</h3>
+                    <p class="jq-search-text">Reuse a class selector across several cards and buttons.</p>
+                    <a href="#selectors">Open lesson</a>
+                </article>
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">ID selectors</h3>
+                    <p class="jq-search-text">Target one unique HTML element with an ID selector.</p>
+                    <a href="#selectors">Open lesson</a>
+                </article>
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">Box model</h3>
+                    <p class="jq-search-text">Understand content, padding, border, and margin around a CSS box.</p>
+                    <a href="#box-model">Open lesson</a>
+                </article>
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">Colors and contrast</h3>
+                    <p class="jq-search-text">Choose readable text colors and contrasting backgrounds.</p>
+                    <a href="#example">Open lesson</a>
+                </article>
+                <article class="jq-topic">
+                    <h3 class="jq-search-text">CSS declarations</h3>
+                    <p class="jq-search-text">Write a property and a value inside a CSS rule.</p>
+                    <a href="#example">Open lesson</a>
+                </article>
+            </div>
+            <div class="jq-stats" aria-label="CSS learning tools">
+                <div class="jq-stat"><span class="jq-counter" data-count="6">0</span>searchable topics</div>
+                <div class="jq-stat"><span class="jq-counter" data-count="2">0</span>CSS lessons</div>
+                <div class="jq-stat"><span class="jq-counter" data-count="10">0</span>jQuery tasks demonstrated</div>
+            </div>
+            <form class="jq-goal-form" id="css-goal-form" novalidate aria-busy="false">
+                <h3 class="h4">Set a practice goal</h3>
+                <p class="form-text">This practice form simulates saving for this visit. It does not send or store your details.</p>
+                <fieldset>
+                    <legend class="visually-hidden">Your CSS practice goal</legend>
+                    <label class="form-label" for="css-goal-name">Your name</label>
+                    <input class="form-control mb-3" id="css-goal-name" name="name" autocomplete="given-name" maxlength="80" required aria-describedby="css-goal-result">
+                    <label class="form-label" for="css-goal-topic">Topic to practise</label>
+                    <select class="form-select mb-3" id="css-goal-topic" name="topic">
+                        <option value="Element selectors">Element selectors</option>
+                        <option value="Class selectors">Class selectors</option>
+                        <option value="ID selectors">ID selectors</option>
+                        <option value="Box model">Box model</option>
+                        <option value="Colors and contrast">Colors and contrast</option>
+                        <option value="CSS declarations">CSS declarations</option>
+                    </select>
+                </fieldset>
+                <div class="jq-form-actions">
+                    <button class="btn btn-primary" id="css-goal-submit" type="submit">Save practice goal</button>
+                    <button class="btn btn-outline-primary" type="reset">Reset goal</button>
+                </div>
+                <p class="jq-status" id="css-goal-result" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- Assignment 5, tasks 2-3 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="lesson-picker">
+            <h2>Choose a CSS lesson</h2>
+            <label class="form-label" for="lesson-category">Topic</label>
+            <select class="form-select mb-3" id="lesson-category">
+                <option value="all">All topics</option>
+                <option value="html">HTML</option>
+                <option value="css" selected>CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+            <p id="lesson-count" role="status"></p>
+            <ul id="lesson-list" class="mb-0"></ul>
+        </section>
+
+        <!-- Assignment 5, tasks 1-2 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="study-plan">
+            <h2>Plan your CSS practice</h2>
+            <p>Choose your next topic in two steps. Your answers stay on this page only.</p>
+            <p id="study-progress" role="status">Step 1 of 2</p>
+            <form id="study-form" novalidate>
+                <fieldset class="study-step">
+                    <legend class="h5">Your name</legend>
+                    <label class="form-label" for="study-name">What should we call you?</label>
+                    <input class="form-control mb-3" id="study-name" name="student" autocomplete="given-name" required>
+                </fieldset>
+                <fieldset class="study-step" hidden>
+                    <legend class="h5">Your next topic</legend>
+                    <label class="form-label" for="study-topic">What do you want to learn?</label>
+                    <select class="form-select mb-3" id="study-topic" name="topic" required>
+                        <option value="">Choose a topic</option>
+                        <option value="Selectors">Selectors</option>
+                        <option value="Colors">Colors</option>
+                        <option value="Box model">Box model</option>
+                    </select>
+                </fieldset>
+                <button class="btn btn-outline-primary" type="button" id="study-back" hidden>Back</button>
+                <button class="btn btn-primary" type="button" id="study-next">Next</button>
+                <button class="btn btn-primary" type="submit" id="study-finish" hidden>Create plan</button>
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                <p class="mt-3 mb-0 text-success" id="study-result" role="status"></p>
+            </form>
+        </section>
+
         <section class="mb-4" id="selectors">
             <h2>Common selectors</h2>
             <p>A selector chooses which HTML element receives a style rule.</p>
             <div class="row g-3">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/css-selectors.svg" alt="CSS selector illustration" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/css-loading.svg" data-src="images/css-selectors.svg" loading="lazy" alt="CSS selector illustration" width="900" height="450">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">Element selector</h3>
                             <p class="card-text">The selector <code>p</code> styles every paragraph on the page.</p>
@@ -69,7 +196,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/css-code.svg" alt="CSS class selector code" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/css-loading.svg" data-src="images/css-code.svg" loading="lazy" alt="CSS class selector code" width="900" height="450">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">Class selector</h3>
                             <p class="card-text">A class such as <code>.card</code> can be reused on several elements.</p>
@@ -79,7 +206,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/css-colors.svg" alt="CSS colors and values" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/css-loading.svg" data-src="images/css-colors.svg" loading="lazy" alt="CSS colors and values" width="900" height="450">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">ID selector</h3>
                             <p class="card-text">An ID such as <code>#header</code> targets one unique element.</p>
@@ -103,7 +230,7 @@
                     </ol>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <img class="img-fluid rounded lesson-image" src="images/css-box-model.svg" alt="Four layers of the CSS box model" width="900" height="450">
+                    <img class="img-fluid rounded lesson-image" src="images/css-loading.svg" data-src="images/css-box-model.svg" loading="lazy" alt="Four layers of the CSS box model" width="900" height="450">
                 </div>
             </div>
         </section>
@@ -191,6 +318,11 @@
         </section>
     </main>
 
+    <div class="jq-toast" id="css-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+        <span id="css-toast-message"></span>
+        <button id="css-toast-close" type="button" aria-label="Dismiss notification">&times;</button>
+    </div>
+
     <footer class="bg-dark text-white text-center p-3 mt-4">
         <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
         <p class="m-0">CSS Basics by Yelnur Yessenali - SE-2514</p>
@@ -198,5 +330,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/css-assignment.js" defer></script>
+    <script src="js/css-jquery.js" defer></script>
 </body>
 </html>

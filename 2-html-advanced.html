@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/html-assignment.css">
+    <link rel="stylesheet" href="css/js-assignment.css">
 </head>
 <body class="assignment-page html-assignment-page">
     <header>
@@ -47,6 +48,43 @@
                     <img class="img-fluid rounded lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page sections" width="900" height="450">
                 </div>
             </div>
+        </section>
+
+        <!-- Assignment 5, task 1 -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="extra-tip">
+            <h2>A useful HTML tip</h2>
+            <p>Open a short tip before trying the practice tools.</p>
+            <p class="read-more-content" id="dom-more">Use header, nav, main and footer to describe the role of each page area. Use a label for each form input and a caption for a table.</p>
+            <button class="btn btn-outline-primary" type="button" id="read-more" aria-expanded="false" aria-controls="dom-more">Read More</button>
+        </section>
+
+        <!-- Assignment 5, task 1 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="lesson-rating">
+            <h2>Rate this lesson</h2>
+            <p>Choose from 1 to 5 stars.</p>
+            <div class="rating-stars" role="group" aria-label="Lesson rating">
+                <button class="rating-star" type="button" aria-label="1 star" aria-pressed="false">&#9733;</button>
+                <button class="rating-star" type="button" aria-label="2 stars" aria-pressed="false">&#9733;</button>
+                <button class="rating-star" type="button" aria-label="3 stars" aria-pressed="false">&#9733;</button>
+                <button class="rating-star" type="button" aria-label="4 stars" aria-pressed="false">&#9733;</button>
+                <button class="rating-star" type="button" aria-label="5 stars" aria-pressed="false">&#9733;</button>
+            </div>
+            <p class="mt-2 mb-0" id="rating-result" role="status">No rating yet.</p>
+        </section>
+
+        <!-- Assignment 5, task 3 -->
+        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="dom-playground">
+            <h2>Try HTML interactions</h2>
+            <p>Move the box or play a short notification sound.</p>
+            <div class="animation-area mb-3">
+                <div id="dom-box">HTML</div>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" type="button" id="move-box" aria-pressed="false">Move box</button>
+                <button class="btn btn-outline-primary" type="button" id="play-sound">Play sound</button>
+            </div>
+            <audio id="notification-sound" src="audio/notification.wav" preload="none"></audio>
+            <p class="mt-3 mb-0" id="sound-result" role="status"></p>
         </section>
 
         <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="table">

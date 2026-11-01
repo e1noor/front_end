@@ -121,12 +121,15 @@
     transform: scale(1.15);
 }
 
+.assignment-page a:focus-visible,
+.assignment-page button:focus-visible,
 .js-assignment-page a:focus-visible,
 .js-assignment-page button:focus-visible {
     outline: 3px solid #0d6efd;
     outline-offset: 3px;
 }
 
+.assignment-page .nav-link:focus-visible,
 .js-assignment-page .nav-link:focus-visible {
     outline-color: #ffc107;
 }
