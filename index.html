@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/html-assignment.css">
     <link rel="stylesheet" href="css/js-assignment.css">
+    <!-- Assignment 6, Task 0 -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 </head>
 <body class="assignment-page html-assignment-page">
+    <!-- Assignment 6, Task 4 -->
+    <div class="scroll-progress" id="scroll-progress"></div>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
@@ -100,6 +104,38 @@
             <p>Your local date and time: <time id="html-clock">Loading...</time></p>
             <button class="btn btn-outline-primary" id="html-change-color" type="button">Change background</button>
             <p class="text-body-secondary mt-2 mb-0">Click to cycle through four light background colors.</p>
+        </section>
+
+        <!-- Assignment 6, Tasks 1-3 -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="term-search-section">
+            <h2>Search HTML elements</h2>
+            <label class="form-label" for="term-search">Type a word, for example "link"</label>
+            <div class="search-box mb-3">
+                <input class="form-control" type="text" id="term-search" autocomplete="off">
+                <ul class="search-suggestions" id="term-suggestions"></ul>
+            </div>
+            <p id="term-count" role="status">Elements found: 8</p>
+            <ul class="list-group" id="term-list">
+                <li class="list-group-item">Heading - shows the title of a section.</li>
+                <li class="list-group-item">Paragraph - a block of text.</li>
+                <li class="list-group-item">Link - opens another page.</li>
+                <li class="list-group-item">Image - shows a picture on the page.</li>
+                <li class="list-group-item">List - groups related items.</li>
+                <li class="list-group-item">Table - shows data in rows and columns.</li>
+                <li class="list-group-item">Form - collects input from the user.</li>
+                <li class="list-group-item">Label - describes a form field.</li>
+            </ul>
+        </section>
+
+        <!-- Assignment 6, Tasks 6-7 -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="question">
+            <h2>Ask about HTML</h2>
+            <p class="text-body-secondary">Practice form: your question is not sent or saved.</p>
+            <form id="question-form">
+                <label class="form-label" for="question-text">Your question</label>
+                <input class="form-control mb-3" id="question-text" required>
+                <button class="btn btn-primary" type="submit" id="question-submit">Submit</button>
+            </form>
         </section>
 
         <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="html-faq">
@@ -226,6 +262,8 @@
         <p class="m-0">Pribylyov Yegor - Nurdaulet Zhanybek - Yelnur Yessenali</p>
         <p class="m-0">HTML Basics by Nurdaulet Zhanybek - SE-2514</p>
     </footer>
+    <!-- Assignment 6, Task 7 -->
+    <div class="toast-message" id="toast" role="status"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/html-assignment.js"></script>

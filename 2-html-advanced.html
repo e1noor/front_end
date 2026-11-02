@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/html-assignment.css">
     <link rel="stylesheet" href="css/js-assignment.css">
+    <!-- Assignment 6, Task 0 -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 </head>
 <body class="assignment-page html-assignment-page">
+    <!-- Assignment 6, Task 4 -->
+    <div class="scroll-progress" id="scroll-progress"></div>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
@@ -47,6 +51,17 @@
                 <div class="col-sm-12 col-lg-6">
                     <img class="img-fluid rounded lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page sections" width="900" height="450">
                 </div>
+            </div>
+        </section>
+
+        <!-- Assignment 6, Task 5 -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="stats">
+            <h2>HTML lessons in numbers</h2>
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="2">0</span></p><p class="mb-0">HTML lessons</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="9">0</span></p><p class="mb-0">illustrations</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="8">0</span></p><p class="mb-0">searchable elements</p></div>
+                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="100">0</span>%</p><p class="mb-0">free to use</p></div>
             </div>
         </section>
 
@@ -105,12 +120,30 @@
             </div>
         </section>
 
+        <!-- Assignment 6, Task 8 -->
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="code-examples">
+            <h2>Copy HTML examples</h2>
+            <p>Copy an example and paste it into your own HTML file.</p>
+            <div class="code-snippet mb-3">
+                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;a href="index.html"&gt;HTML Basics&lt;/a&gt;</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
+            </div>
+            <div class="code-snippet mb-3">
+                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;label for="email"&gt;Email&lt;/label&gt; &lt;input type="email" id="email"&gt;</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
+            </div>
+            <div class="code-snippet">
+                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Day&lt;/th&gt;&lt;td&gt;Monday&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>
+                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
+            </div>
+        </section>
+
         <section class="mb-4" id="more-topics">
             <h2>More HTML elements</h2>
             <div class="row g-3">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/html-lists.svg" alt="Ordered HTML list" width="900" height="450">
+                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-lists.svg" alt="Ordered HTML list" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Lists</h3>
                             <p class="card-text">Group related items with <code>ul</code> or show a sequence with <code>ol</code>.</p>
@@ -119,7 +152,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/html-tables.svg" alt="HTML table with rows and columns" width="900" height="450">
+                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-tables.svg" alt="HTML table with rows and columns" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Tables</h3>
                             <p class="card-text">Use a table for real data with rows, cells, headings, and a caption.</p>
@@ -128,7 +161,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image" src="images/html-forms.svg" alt="HTML form fields" width="900" height="450">
+                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-forms.svg" alt="HTML form fields" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Forms</h3>
                             <p class="card-text">Pair each input with a label so the form is clear and accessible.</p>

@@ -343,3 +343,123 @@ if (playSoundButton) {
         });
     });
 }
+
+// Assignment 6, Task 0
+$(document).ready(function () {
+    console.log("jQuery is ready!");
+
+    // Assignment 6, Task 1
+    const terms = $("#term-list li");
+
+    function searchTerms(value) {
+        terms.hide();
+        const found = terms.filter(function () {
+            return $(this).text().toLowerCase().includes(value);
+        }).show();
+        $("#term-count").text("Elements found: " + found.length);
+        highlightTerms(value);
+    }
+
+    $("#term-search").on("input", function () {
+        const value = $(this).val().trim().toLowerCase();
+        searchTerms(value);
+        showSuggestions(value);
+    });
+
+    // Assignment 6, Task 2
+    function showSuggestions(value) {
+        const suggestions = $("#term-suggestions").empty();
+        if (value === "") {
+            return;
+        }
+        terms.each(function () {
+            const name = $(this).text().split(" - ")[0];
+            if (name.toLowerCase().startsWith(value)) {
+                $("<li>").append($("<button type='button'>").text(name)).appendTo(suggestions);
+            }
+        });
+    }
+
+    $("#term-suggestions").on("click", "button", function () {
+        $("#term-search").val($(this).text());
+        searchTerms($(this).text().toLowerCase());
+        $("#term-suggestions").empty();
+    });
+
+    // Assignment 6, Task 3
+    function highlightTerms(value) {
+        const pattern = new RegExp(value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+        terms.each(function () {
+            const text = $(this).text();
+            $(this).html(value === "" ? text : text.replace(pattern, "<mark>$&</mark>"));
+        });
+    }
+
+    // Assignment 6, Task 4
+    $(window).on("scroll", function () {
+        const height = $(document).height() - $(window).height();
+        $("#scroll-progress").css("width", $(window).scrollTop() / height * 100 + "%");
+    });
+
+    // Assignment 6, Task 5
+    $(".counter").each(function () {
+        const counter = $(this);
+        $({ value: 0 }).animate({ value: counter.data("target") }, {
+            duration: 2000,
+            step: function (now) {
+                counter.text(Math.ceil(now));
+            }
+        });
+    });
+
+    // Assignment 6, Task 6
+    $("#question-form").on("submit", function (event) {
+        event.preventDefault();
+        const form = this;
+        const button = $("#question-submit");
+        button.prop("disabled", true).html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Please wait...');
+
+        setTimeout(function () {
+            button.prop("disabled", false).text("Submit");
+            form.reset();
+            showToast("Question submitted successfully!");
+        }, 2000);
+    });
+
+    // Assignment 6, Task 7
+    function showToast(message) {
+        $("#toast").text(message).stop(true, true).fadeIn(300).delay(2500).fadeOut(600);
+    }
+
+    // Assignment 6, Task 8
+    function showCopied(button) {
+        button.addClass("copied").find(".copy-icon").text("✓");
+        setTimeout(function () {
+            button.removeClass("copied").find(".copy-icon").text("📋");
+        }, 2000);
+    }
+
+    $(".copy-button").on("click", function () {
+        const button = $(this);
+        navigator.clipboard.writeText(button.siblings("pre").text()).then(function () {
+            showCopied(button);
+        });
+    });
+
+    $(".code-snippet pre").on("copy", function () {
+        showCopied($(this).siblings(".copy-button"));
+    });
+
+    // Assignment 6, Task 9
+    function loadImages() {
+        const bottom = $(window).scrollTop() + $(window).height();
+        $("img.lazy").each(function () {
+            if ($(this).offset().top < bottom) {
+                $(this).attr("src", $(this).data("src")).removeClass("lazy");
+            }
+        });
+    }
+
+    $(window).on("scroll", loadImages);
+    loadImages();
+});
