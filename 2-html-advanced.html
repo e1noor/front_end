@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Advanced | Web Dev Guide</title>
+    <link rel="icon" href="images/html-semantic.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/html-assignment.css">
-    <link rel="stylesheet" href="css/js-assignment.css">
-    <!-- Assignment 6, Task 0 -->
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 </head>
-<body class="assignment-page html-assignment-page">
-    <!-- Assignment 6, Task 4 -->
-    <div class="scroll-progress" id="scroll-progress"></div>
+<body>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Main navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Web Dev Guide</a>
+                <a class="navbar-brand" href="index.html"><span class="brand-icon">&lt;/&gt;</span> Web Dev Guide</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Open navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="main-menu">
-                    <div class="navbar-nav ms-auto">
+                    <div class="navbar-nav ms-auto align-items-lg-center">
                         <a class="nav-link" href="index.html">HTML Basics</a>
                         <a class="nav-link active" aria-current="page" href="2-html-advanced.html">HTML Advanced</a>
                         <a class="nav-link" href="3-css-basics.html">CSS Basics</a>
                         <a class="nav-link" href="4-css-layout.html">CSS Layout</a>
                         <a class="nav-link" href="5-js-basics.html">JS Basics</a>
                         <a class="nav-link" href="6-js-dom.html">JS DOM</a>
+                        <a class="nav-link" href="profile.html">Profile</a>
+                        <div class="form-check form-switch ms-lg-3 mt-2 mt-lg-0 d-flex align-items-center gap-2">
+                            <input class="form-check-input m-0" type="checkbox" role="switch" id="theme-toggle">
+                            <label class="form-check-label text-light" for="theme-toggle" id="theme-label">Dark Mode</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container px-sm-2 py-3 py-lg-4">
-        <section class="bg-white border rounded p-3 p-lg-4 mt-lg-4 mb-4" id="intro">
+    <main class="container py-3 py-lg-4">
+        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="intro">
             <div class="row g-3 align-items-center">
                 <div class="col-sm-12 col-lg-6">
                     <p class="text-primary fw-semibold mb-2">HTML LESSON 2</p>
@@ -52,54 +52,6 @@
                     <img class="img-fluid rounded lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page sections" width="900" height="450">
                 </div>
             </div>
-        </section>
-
-        <!-- Assignment 6, Task 5 -->
-        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="stats">
-            <h2>HTML lessons in numbers</h2>
-            <div class="row g-3 text-center">
-                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="2">0</span></p><p class="mb-0">HTML lessons</p></div>
-                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="9">0</span></p><p class="mb-0">illustrations</p></div>
-                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="8">0</span></p><p class="mb-0">searchable elements</p></div>
-                <div class="col-6 col-md-3"><p class="stat-number"><span class="counter" data-target="100">0</span>%</p><p class="mb-0">free to use</p></div>
-            </div>
-        </section>
-
-        <!-- Assignment 5, task 1 -->
-        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="extra-tip">
-            <h2>A useful HTML tip</h2>
-            <p>Open a short tip before trying the practice tools.</p>
-            <p class="read-more-content" id="dom-more">Use header, nav, main and footer to describe the role of each page area. Use a label for each form input and a caption for a table.</p>
-            <button class="btn btn-outline-primary" type="button" id="read-more" aria-expanded="false" aria-controls="dom-more">Read More</button>
-        </section>
-
-        <!-- Assignment 5, task 1 -->
-        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="lesson-rating">
-            <h2>Rate this lesson</h2>
-            <p>Choose from 1 to 5 stars.</p>
-            <div class="rating-stars" role="group" aria-label="Lesson rating">
-                <button class="rating-star" type="button" aria-label="1 star" aria-pressed="false">&#9733;</button>
-                <button class="rating-star" type="button" aria-label="2 stars" aria-pressed="false">&#9733;</button>
-                <button class="rating-star" type="button" aria-label="3 stars" aria-pressed="false">&#9733;</button>
-                <button class="rating-star" type="button" aria-label="4 stars" aria-pressed="false">&#9733;</button>
-                <button class="rating-star" type="button" aria-label="5 stars" aria-pressed="false">&#9733;</button>
-            </div>
-            <p class="mt-2 mb-0" id="rating-result" role="status">No rating yet.</p>
-        </section>
-
-        <!-- Assignment 5, task 3 -->
-        <section class="bg-white rounded p-3 p-lg-4 mb-4" id="dom-playground">
-            <h2>Try HTML interactions</h2>
-            <p>Move the box or play a short notification sound.</p>
-            <div class="animation-area mb-3">
-                <div id="dom-box">HTML</div>
-            </div>
-            <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-primary" type="button" id="move-box" aria-pressed="false">Move box</button>
-                <button class="btn btn-outline-primary" type="button" id="play-sound">Play sound</button>
-            </div>
-            <audio id="notification-sound" src="audio/notification.wav" preload="none"></audio>
-            <p class="mt-3 mb-0" id="sound-result" role="status"></p>
         </section>
 
         <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="table">
@@ -120,30 +72,12 @@
             </div>
         </section>
 
-        <!-- Assignment 6, Task 8 -->
-        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="code-examples">
-            <h2>Copy HTML examples</h2>
-            <p>Copy an example and paste it into your own HTML file.</p>
-            <div class="code-snippet mb-3">
-                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;a href="index.html"&gt;HTML Basics&lt;/a&gt;</code></pre>
-                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
-            </div>
-            <div class="code-snippet mb-3">
-                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;label for="email"&gt;Email&lt;/label&gt; &lt;input type="email" id="email"&gt;</code></pre>
-                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
-            </div>
-            <div class="code-snippet">
-                <pre class="bg-light border rounded p-3 mb-0"><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Day&lt;/th&gt;&lt;td&gt;Monday&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>
-                <button class="copy-button" type="button"><span class="copy-icon">📋</span> Copy</button>
-            </div>
-        </section>
-
         <section class="mb-4" id="more-topics">
             <h2>More HTML elements</h2>
             <div class="row g-3">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-lists.svg" alt="Ordered HTML list" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/html-lists.svg" alt="Ordered HTML list" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Lists</h3>
                             <p class="card-text">Group related items with <code>ul</code> or show a sequence with <code>ol</code>.</p>
@@ -152,7 +86,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-tables.svg" alt="HTML table with rows and columns" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/html-tables.svg" alt="HTML table with rows and columns" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Tables</h3>
                             <p class="card-text">Use a table for real data with rows, cells, headings, and a caption.</p>
@@ -161,7 +95,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <article class="card h-100">
-                        <img class="card-img-top lesson-image lazy" src="images/placeholder.svg" data-src="images/html-forms.svg" alt="HTML form fields" width="900" height="450">
+                        <img class="card-img-top lesson-image" src="images/html-forms.svg" alt="HTML form fields" width="900" height="450">
                         <div class="card-body">
                             <h3 class="card-title h5">Forms</h3>
                             <p class="card-text">Pair each input with a label so the form is clear and accessible.</p>
@@ -171,107 +105,39 @@
             </div>
         </section>
 
-        <section class="bg-white border rounded p-3 p-lg-4 mb-4" id="gallery">
-            <h2>HTML concept gallery</h2>
-            <p>Nine illustrations show the main ideas from both HTML lessons.</p>
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-lg-8">
-                    <div id="html-carousel" class="carousel carousel-dark slide" role="region" aria-label="Nine HTML illustrations">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: structure"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="1" aria-label="Slide 2: headings"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="2" aria-label="Slide 3: paragraphs"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="3" aria-label="Slide 4: links"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="4" aria-label="Slide 5: images"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="5" aria-label="Slide 6: lists"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="6" aria-label="Slide 7: tables"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="7" aria-label="Slide 8: forms"></button>
-                            <button type="button" data-bs-target="#html-carousel" data-bs-slide-to="8" aria-label="Slide 9: semantic HTML"></button>
-                        </div>
-                        <div class="carousel-inner rounded border">
-                            <div class="carousel-item active"><img class="d-block w-100 lesson-image" src="images/html-structure.svg" alt="HTML document structure" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-headings.svg" alt="HTML heading example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-paragraphs.svg" alt="HTML paragraph example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-links.svg" alt="HTML link example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-images.svg" alt="HTML image example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-lists.svg" alt="HTML list example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-tables.svg" alt="HTML table example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-forms.svg" alt="HTML form example" width="900" height="450"></div>
-                            <div class="carousel-item"><img class="d-block w-100 lesson-image" src="images/html-semantic.svg" alt="Semantic HTML page example" width="900" height="450"></div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#html-carousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#html-carousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="bg-white border rounded p-3 p-lg-4" id="contact">
-            <h2>Practice contact form</h2>
-            <p class="text-body-secondary" id="form-help">Practice only: nothing is sent or saved. Use a made-up password with at least 8 characters.</p>
-            <form id="html-contact-form" class="row g-3" aria-describedby="form-help" novalidate>
+            <h2>Contact and feedback form</h2>
+            <p class="text-body-secondary">All fields are validated with JavaScript. Password requires 8+ characters with letters and numbers.</p>
+            <form id="practice-form" class="row g-3" novalidate>
                 <div class="col-sm-12 col-md-6">
-                    <label class="form-label" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
-                    <p class="text-danger small mb-0" id="name-error"></p>
+                    <label class="form-label" for="form-name">Full name</label>
+                    <input class="form-control" type="text" id="form-name" name="name" placeholder="Your name">
+                    <p class="error-text" id="form-name-error"></p>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <label class="form-label" for="email">Email</label>
-                    <div class="input-group">
-                        <span class="input-group-text" aria-hidden="true">@</span>
-                        <input class="form-control" type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
-                    </div>
-                    <p class="text-danger small mb-0" id="email-error"></p>
+                    <label class="form-label" for="form-email">Email</label>
+                    <input class="form-control" type="text" id="form-email" name="email" placeholder="name@example.com">
+                    <p class="error-text" id="form-email-error"></p>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <label class="form-label" for="password">Practice password</label>
-                    <input class="form-control" type="password" id="password" autocomplete="new-password" minlength="8" required aria-describedby="password-error">
-                    <p class="text-danger small mb-0" id="password-error"></p>
+                    <label class="form-label" for="form-phone">Phone number</label>
+                    <input class="form-control" type="text" id="form-phone" name="phone" placeholder="+77001234567">
+                    <p class="error-text" id="form-phone-error"></p>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <label class="form-label" for="confirm-password">Confirm password</label>
-                    <input class="form-control" type="password" id="confirm-password" autocomplete="new-password" required aria-describedby="confirm-password-error">
-                    <p class="text-danger small mb-0" id="confirm-password-error"></p>
+                    <label class="form-label" for="form-password">Password</label>
+                    <input class="form-control" type="password" id="form-password" name="password" placeholder="At least 8 chars, letters &amp; numbers">
+                    <p class="error-text" id="form-password-error"></p>
                 </div>
                 <div class="col-12">
-                    <label class="form-label" for="topic">Topic</label>
-                    <select class="form-select" id="topic" name="topic">
-                        <option>HTML</option><option>CSS</option><option>JavaScript</option>
-                    </select>
-                </div>
-                <fieldset class="col-12">
-                    <legend class="fs-6">Learning level</legend>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="beginner" name="level" value="beginner" checked>
-                        <label class="form-check-label" for="beginner">Beginner</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="intermediate" name="level" value="intermediate">
-                        <label class="form-check-label" for="intermediate">Intermediate</label>
-                    </div>
-                </fieldset>
-                <div class="col-12">
-                    <label class="form-label" for="message">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="3" required aria-describedby="message-error"></textarea>
-                    <p class="text-danger small mb-0" id="message-error"></p>
+                    <label class="form-label" for="form-message">Message</label>
+                    <textarea class="form-control" id="form-message" name="message" rows="3" placeholder="Write your question or feedback"></textarea>
+                    <p class="error-text" id="form-message-error"></p>
                 </div>
                 <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="updates" name="updates">
-                        <label class="form-check-label" for="updates">I would like more practice examples</label>
-                    </div>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <p class="mt-3 mb-0" id="form-result" role="status"></p>
                 </div>
-                <div class="col-12 d-flex flex-wrap align-items-center gap-2">
-                    <button class="btn btn-primary btn-lg" type="submit">Check form</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="reset">Clear</button>
-                </div>
-                <div class="col-12"><p class="mb-0" id="html-form-result" role="status"></p></div>
             </form>
         </section>
     </main>
@@ -282,6 +148,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="js/html-assignment.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
