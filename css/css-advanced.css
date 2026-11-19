@@ -1,0 +1,93 @@
+/* Assignment 5: scoped to Yelnur's CSS lessons. */
+.css-topic-page { --lab-surface: #fff; --lab-soft: #f2f7fa; }
+.css-topic-page [hidden] { display: none !important; }
+.css-topic-page .lab-section { scroll-margin-top: 1rem; }
+.css-topic-page .lab-toolbar, .css-topic-page .lab-actions {
+    display: flex; align-items: center; flex-wrap: wrap; gap: .75rem;
+}
+.css-topic-page .lab-toolbar { justify-content: space-between; }
+.css-topic-page .lab-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem; margin-top: 1.5rem;
+}
+.css-topic-page .lab-panel {
+    min-width: 0; padding: 1.25rem; border: 1px solid var(--css-border);
+    border-radius: .85rem; background: var(--lab-soft);
+}
+.css-topic-page .lab-wide { grid-column: 1 / -1; }
+.css-topic-page .lab-status { min-height: 1.5em; margin: .75rem 0 0; }
+.css-topic-page .lab-stars { display: flex; gap: .25rem; }
+.css-topic-page .lab-star {
+    padding: .1rem .35rem; border: 0; background: transparent; color: #61778a;
+    font-size: 2rem; transition: transform 180ms ease, color 180ms ease;
+}
+.css-topic-page .lab-star[aria-pressed="true"] { color: #966300; }
+.css-topic-page .lab-star:hover { transform: scale(1.15); }
+.css-topic-page .lab-list {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem; padding: 0; margin: 1rem 0; list-style: none;
+}
+.css-topic-page .lab-list li {
+    padding: 1rem; border: 1px solid var(--css-border);
+    border-radius: .65rem; background: var(--lab-surface);
+}
+.css-topic-page .lab-list a { font-weight: 700; }
+.css-topic-page .lab-list p { margin: .5rem 0 0; }
+.css-topic-page .lab-stage {
+    display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;
+    min-height: 180px; margin: 1rem 0; padding: 1rem;
+    border: 2px dashed var(--css-border); border-radius: .75rem; background: var(--lab-surface);
+}
+.css-topic-page .lab-tile {
+    display: grid; place-items: center; min-width: 0; min-height: 64px;
+    padding: .75rem; border-radius: .5rem; color: #fff; background: #126f82; font-weight: 700;
+}
+.css-topic-page .lab-tile:nth-child(even) { background: #3c52a0; }
+.css-topic-page .lab-sound-stage {
+    overflow: hidden; min-height: 90px; padding: 1rem; border-radius: .75rem; background: var(--lab-soft);
+}
+.css-topic-page .lab-sound-dot {
+    display: inline-grid; place-items: center; width: 52px; height: 52px;
+    border-radius: 50%; color: #fff; background: var(--css-accent-dark); font-weight: 700;
+}
+.css-topic-page .lab-sound-dot.is-playing { animation: lab-bounce 650ms ease; }
+@keyframes lab-bounce {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    50% { transform: translateX(90px) rotate(180deg) scale(1.1); }
+}
+.css-topic-page :focus-visible { outline: 3px solid #c17e00; outline-offset: 4px; }
+.css-topic-page[data-theme="night"] {
+    color-scheme: dark; --css-ink: #e6eef7; --css-accent: #79d7e5;
+    --css-accent-dark: #136777; --css-border: #40546b;
+    --lab-surface: #1a2c40; --lab-soft: #142336;
+    --bs-body-color: #e6eef7; --bs-body-bg: #1a2c40; --bs-secondary-color: #becbdd;
+    --bs-border-color: #40546b; --bs-link-color: #89dded; --bs-link-hover-color: #b7f2fa;
+    --bs-emphasis-color: #fff; color: var(--css-ink);
+}
+.css-topic-page[data-theme="night"].bg-light { background: #0d1929 !important; }
+.css-topic-page[data-theme="night"] .bg-white,
+.css-topic-page[data-theme="night"] .card,
+.css-topic-page[data-theme="night"] .js-modal-dialog { background: var(--lab-surface) !important; color: var(--css-ink); }
+.css-topic-page[data-theme="night"] .js-lab-panel { background: var(--lab-soft); }
+.css-topic-page[data-theme="night"] .btn-primary { color: #07202a; background: #79d7e5; border-color: #79d7e5; }
+.css-topic-page[data-theme="night"] .btn-primary:hover { background: #b7f2fa; }
+.css-topic-page[data-theme="night"] main a:not(.btn) { color: #89dded; }
+.css-topic-page[data-theme="night"] main a:not(.btn):hover { color: #b7f2fa; }
+.css-topic-page[data-theme="night"] .btn-outline-primary:hover,
+.css-topic-page[data-theme="night"] .btn-outline-primary:focus-visible { color: #07202a; }
+.css-topic-page[data-theme="night"] .text-danger { color: #ffaaaa !important; }
+.css-topic-page[data-theme="night"] .form-control,
+.css-topic-page[data-theme="night"] .form-select { background-color: #142336; color: #e6eef7; border-color: #60758c; }
+.css-topic-page[data-theme="night"] .table { --bs-table-bg: #1a2c40; --bs-table-color: #e6eef7; --bs-table-striped-color: #e6eef7; --bs-table-striped-bg: #22364d; }
+.css-topic-page[data-theme="night"] .lab-star[aria-pressed="true"] { color: #ffce66; }
+.css-topic-page[data-theme="night"] .js-live-clock { color: #79d7e5; }
+.css-topic-page[data-theme="night"] .invalid-feedback,
+.css-topic-page[data-theme="night"] .js-lab-message { color: #ffaaaa; }
+.css-topic-page[data-theme="night"] .js-lab-message.is-success { color: #8fe0b1; }
+@media (max-width: 767px) {
+    .css-topic-page .lab-grid, .css-topic-page .lab-list { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .css-topic-page .lab-sound-dot.is-playing { animation: none; }
+    .css-topic-page .lab-star { transition: none; }
+}
